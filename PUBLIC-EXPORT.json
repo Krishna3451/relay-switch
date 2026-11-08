@@ -93,6 +93,10 @@
       "sha256": "72387b11c25ef0c4518bda62d3e3ce12dba88492acd3d11d411980f31cc1f07f",
       "bytes": 2246
     },
+    "demo/final-v3/delivery/publication.json": {
+      "sha256": "80791b5302d3c5e750e59e29ac943b1316ed97c481dcefe7348fb4194f16ae16",
+      "bytes": 1142
+    },
     "demo/final-v3/qa/01-hook.png": {
       "sha256": "7ea6a0c3f1aa41e6281d9d7f3bfc007b0059fd491ee70c7f5b772b01ea870df5",
       "bytes": 178889
@@ -446,7 +450,7 @@
       "bytes": 23388
     }
   },
-  "file_count": 111,
+  "file_count": 112,
   "known_secret_values_checked": 18,
   "known_secret_occurrences": 0,
   "credential_pattern_occurrences": 0,

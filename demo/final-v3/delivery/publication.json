@@ -1,0 +1,23 @@
+{
+  "platform": "YouTube",
+  "video_id": "hwYgd1PSP4U",
+  "url": "https://youtu.be/hwYgd1PSP4U",
+  "title": "Relay — Two Teams, One Recovery | Switch Hackathon Demo",
+  "channel_name": "Krishna",
+  "channel_id": "UC8QmUasicRZsFBZrOPvh6kg",
+  "channel_url": "https://www.youtube.com/@krishna3364",
+  "visibility": "unlisted",
+  "audience": "not made for kids",
+  "ai_use_disclosed": true,
+  "audience_and_ai_settings_confirmed_by_owner": true,
+  "english_timed_subtitles_published": true,
+  "copyright_check_at_publish": "No issues found",
+  "source_file": "Relay-final.mp4",
+  "source_sha256": "b832b14d7ee689458cdc49fca828fab670ccb95efa57265a9fd620302ed4bb51",
+  "source_bytes": 8235403,
+  "duration_seconds": 150.666667,
+  "published_ui_observed": true,
+  "anonymous_oembed_verified": true,
+  "verified_at_utc": "2026-11-08T03:22:14Z",
+  "verification_note": "YouTube Studio showed Video published and English subtitles published. An unauthenticated YouTube oEmbed request returned this title and channel. Local assembly and frame reviews are separate evidence; this record does not claim an independent full streamed-playback review."
+}
