@@ -22,6 +22,7 @@ Relay's agents prepare incident-scoped findings; an enrolled owner reviews the
 exact text before it crosses to the other company. A finding can generate another
 question, so the shared incident carries the investigation forward between teams.
 
+[Explore the interactive showcase](https://krishna3451.github.io/relay-switch/) ·
 [Watch the revised 2:31 demo](https://youtu.be/hwYgd1PSP4U) ·
 [Download the final video](demo/final-v3/delivery/Relay-final.mp4) ·
 [Captions](demo/final-v3/delivery/Relay-final.srt) ·
@@ -189,6 +190,12 @@ disclosure format. That replay made no model calls or Switch posts.
 [Fresh causal check](evidence/submission-causal-proof.json)
 
 ## Run locally
+
+The [GitHub Pages site](https://krishna3451.github.io/relay-switch/) includes an
+illustrative browser walkthrough and the recorded video with English captions.
+It is a static showcase; it does not run the agents or repair infrastructure.
+Its buildless HTML, CSS and JavaScript live in `docs/`. Preview the site with
+`python3 -m http.server 4339 --directory docs`. GitHub Pages publishes `main:/docs`.
 
 ### 1. Install and verify the core
 
