@@ -191,7 +191,12 @@ def main():
         for source in (ROOT / folder).rglob('*'):
             relative = source.relative_to(ROOT)
             if source.is_file() and not (set(relative.parts) & SKIP_PARTS):
-                if source.suffix in CODE_SUFFIXES or source.name.startswith('run-') or (folder == 'docs' and source.suffix == '.png') or (folder == '.github' and source.suffix in {'.yml', '.yaml'}):
+                is_doc_asset = folder == 'docs' and (
+                    source.suffix in {'.png', '.mp4', '.vtt', '.woff2', '.ico'}
+                    or source.name == '.nojekyll'
+                )
+                is_workflow = folder == '.github' and source.suffix in {'.yml', '.yaml'}
+                if source.suffix in CODE_SUFFIXES or source.name.startswith('run-') or is_doc_asset or is_workflow:
                     paths.add(relative)
     for source in (ROOT / demo_dir / 'delivery').glob('*'):
         if source.suffix in {'.mp4', '.srt', '.txt', '.json'}:

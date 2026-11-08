@@ -213,9 +213,41 @@
       "sha256": "af06a3a1add43df3c5869f5324a760cba578dcc2d287f9164bc8a58a699d4264",
       "bytes": 240
     },
+    "docs/.nojekyll": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "docs/assets/Relay-final.mp4": {
+      "sha256": "b832b14d7ee689458cdc49fca828fab670ccb95efa57265a9fd620302ed4bb51",
+      "bytes": 8235403
+    },
+    "docs/assets/Relay-final.vtt": {
+      "sha256": "4bae9130000b570755e8c4b59adc4c4b8d20da4da3e1cd7e98e6ffcb2db85d4c",
+      "bytes": 3594
+    },
+    "docs/assets/approved-finding.png": {
+      "sha256": "65dd0204ac2fe8d51291094613da3e665a8dbb10c4c7924f4ec04484cfb05911",
+      "bytes": 767247
+    },
+    "docs/assets/partial-recovery.png": {
+      "sha256": "ed9e20925e93f5ba3ba492b53fc08bbbfb3c63d3eb55db0b3a43bcf9b21b8b52",
+      "bytes": 650979
+    },
     "docs/assets/relay-overview.png": {
       "sha256": "149ef932f81085d8f36f4386f2f8a4c591626e06e15bb1d29b4eddfee986b8d2",
       "bytes": 127041
+    },
+    "docs/index.html": {
+      "sha256": "52608c4ff28bad8e7acc45fe003e5c5db511802a3d0ac4933cf77a483b45e820",
+      "bytes": 10423
+    },
+    "docs/relay-site.css": {
+      "sha256": "05851e86e0c1b73367ea0400fdf3a3918aa50ce3b96d3c0543bcf8d4cf9047e0",
+      "bytes": 15448
+    },
+    "docs/relay-site.js": {
+      "sha256": "63bd2be1e639716494a60a18db4a1f77d4297a71f55eae936435efe66444bebf",
+      "bytes": 9618
     },
     "engine/__init__.py": {
       "sha256": "218953e899dfc09b167a8be1f2243a2546da3190cbb1cb6801b252b57e1aee90",
@@ -410,8 +442,8 @@
       "bytes": 8947
     },
     "scripts/submission-export.py": {
-      "sha256": "64ae4dee8ac2c11abce92bb4d91120621c7144cb32e1deb883c9f542555ac098",
-      "bytes": 15009
+      "sha256": "d3d86048103942d47b468896b8c7acd6484537b2160ed874e1718f3cbadb9a91",
+      "bytes": 15217
     },
     "scripts/voiceover.py": {
       "sha256": "12df065836f8839d581efd50c621a323d7440559c0cba33ff17a0372e34ffd70",
@@ -450,7 +482,7 @@
       "bytes": 23388
     }
   },
-  "file_count": 112,
+  "file_count": 120,
   "known_secret_values_checked": 18,
   "known_secret_occurrences": 0,
   "credential_pattern_occurrences": 0,

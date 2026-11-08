@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Relay connects two companies' agents through Switch. Explore an incident where each team controls what is shared and changed, then verifies that messages arrive.">
+  <meta name="theme-color" content="#f6f8fc">
+  <meta property="og:title" content="Relay | Two companies. One recovery.">
+  <meta property="og:description" content="A messaging outage. Two agents. Human approvals. A recovery verified where it matters: the customer's messages.">
+  <meta property="og:image" content="https://Krishna3451.github.io/relay-switch/assets/relay-overview.png">
+  <title>Relay | Two companies. One recovery.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23234dc4'/%3E%3Ctext x='18' y='46' font-family='Arial,sans-serif' font-size='42' font-weight='700' fill='%23fff'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="relay-site.css">
+  <script src="relay-site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#main" aria-label="Relay home"><span class="brand-mark" aria-hidden="true">R</span>Relay</a>
+    <nav aria-label="Main navigation"><a href="#walkthrough">Explore incident</a><a href="#film">Watch the demo</a><a href="https://github.com/Krishna3451/relay-switch">GitHub <span aria-hidden="true">↗</span></a></nav>
+    <button class="theme-control" id="theme-control" type="button" aria-label="Switch color theme">Theme</button>
+  </header>
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Built with Switch</p>
+        <h1>Two companies.<br><span>One recovery.</span></h1>
+        <p class="hero-description">TeamChat’s messages stop. Relay connects its agent with HarborCloud’s agent, while each team controls what’s shared and changed.</p>
+        <div class="hero-actions"><a class="button primary" href="#walkthrough">Explore incident <span aria-hidden="true">↗</span></a><a class="text-link" href="#film">Watch the demo <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <figure class="hero-visual">
+        <div class="image-mat"><img src="assets/approved-finding.png" width="1920" height="1080" alt="The recorded demo follows the same owner-approved finding from TeamChat's private review into the shared incident." fetchpriority="high"></div>
+        <figcaption><span>One reviewed finding crosses the boundary.</span><span>The private diagnostics stay behind.</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="context wrap" aria-label="The two companies">
+      <div class="company"><span class="company-letter" aria-hidden="true">T</span><div><h2>TeamChat</h2><p>A messaging app for people and teams.</p></div></div>
+      <div class="relationship"><span aria-hidden="true">⟷</span><p>One customer problem.<br>Two separate owners.</p></div>
+      <div class="company"><span class="company-letter" aria-hidden="true">H</span><div><h2>HarborCloud</h2><p>The cloud platform behind its connection.</p></div></div>
+    </section>
+
+    <section class="walkthrough-section" id="walkthrough" aria-labelledby="walkthrough-title">
+      <div class="wrap">
+        <div class="section-intro"><h2 id="walkthrough-title">Work through the outage.</h2><p>Take the owners’ decisions. See what crosses between companies, what stays private, and why one successful check is not enough.</p></div>
+        <div class="walkthrough-note"><span class="sample-label">Interactive walkthrough</span><p>A sample scenario in your browser. No live agents or infrastructure are running here.</p></div>
+        <noscript><p class="noscript">Enable JavaScript to use the walkthrough, or watch the recorded demo below.</p></noscript>
+        <div class="incident" id="incident" hidden>
+          <ol class="steps" id="steps" aria-label="Recovery steps"></ol>
+          <div class="scene-header"><div><p class="scene-kicker" id="scene-kicker">The incident</p><h3 id="scene-title">Messages are not arriving.</h3></div><div class="outcome"><span>Customer delivery</span><strong id="delivery-count">13<span>/24</span></strong></div></div>
+          <div class="workspace-grid" id="workspace-grid">
+            <section class="workspace private-space" aria-labelledby="teamchat-heading"><div class="workspace-heading"><span class="scope-label">Private to TeamChat</span><h4 id="teamchat-heading">Maya + TeamChat Agent</h4></div><p class="agent-note" id="app-note"></p><div class="finding-review" id="finding-review" hidden><span>Finding for Maya to review</span><blockquote id="finding-review-text"></blockquote></div><div class="private-detail"><span>Stays on this side</span><p>Detailed service observations and internal system context.</p></div></section>
+            <section class="workspace shared-space" aria-labelledby="incident-heading"><div class="workspace-heading"><span class="scope-label">Shared through Switch</span><h4 id="incident-heading">The incident thread</h4></div><div class="shared-message" id="shared-message"></div><p class="shared-rule" id="shared-rule"></p></section>
+            <section class="workspace private-space" aria-labelledby="harbor-heading"><div class="workspace-heading"><span class="scope-label">Private to HarborCloud</span><h4 id="harbor-heading">Leo + HarborCloud Agent</h4></div><p class="agent-note" id="cloud-note"></p><div class="cloud-check"><span>Cloud connection</span><strong id="cloud-count">Not checked</strong></div><div class="private-detail"><span>Stays on this side</span><p>Provider diagnostics and the authority to change cloud capacity.</p></div></section>
+          </div>
+          <div class="scene-explanation"><p id="scene-explanation"></p><p class="retry-result" id="retry-result" hidden></p></div>
+          <div class="scene-actions"><div><button class="button primary" id="advance" type="button">Review the finding</button><button class="button secondary" id="retry" type="button" hidden>Retry original message</button></div><div class="history-actions"><button class="plain-button" id="previous" type="button" disabled>Back</button><button class="plain-button" id="restart" type="button">Start again</button></div></div>
+          <p class="simulation-source">The walkthrough simplifies the recorded flow. Delivery counts come from the <a href="https://github.com/Krishna3451/relay-switch/blob/main/evidence/native-verification.json">recorded local run</a>; the text here is illustrative.</p>
+          <p class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="announcement"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-section wrap" aria-labelledby="proof-title">
+      <div class="proof-copy"><h2 id="proof-title">Cloud healthy.<br>Messages still failing.</h2><p>A team fixing its own system does not prove the customer’s problem is solved.</p><p>HarborCloud’s check passes 6/6. But only 15 of 24 messages arrive. Relay brings that result back to TeamChat’s agent to finish the recovery.</p><a class="text-link" href="https://github.com/Krishna3451/relay-switch#evidence">Read the recorded evidence <span aria-hidden="true">↗</span></a></div>
+      <figure class="proof-image"><img src="assets/partial-recovery.png" width="1920" height="1080" alt="Actual demo frame: HarborCloud's connection check passes six of six, but TeamChat still delivers only fifteen of twenty-four messages." loading="lazy"><figcaption>Actual frame from the recorded Mattermost demo.</figcaption></figure>
+    </section>
+
+    <section class="film-section wrap" id="film" aria-labelledby="film-title">
+      <div class="section-intro"><h2 id="film-title">See it happen in Mattermost.</h2><p>The 2:31 demo follows the investigation, exact-text sharing reviews, two approved repairs, and recovery of an earlier failed message.</p></div>
+      <div class="film-frame"><video id="demo-video" aria-label="Relay recorded Mattermost demo" controls preload="none" poster="assets/relay-overview.png" playsinline width="1920" height="1080"><source src="assets/Relay-final.mp4" type="video/mp4"><track label="English" kind="captions" srclang="en" src="assets/Relay-final.vtt">Your browser cannot play this video. <a href="https://youtu.be/hwYgd1PSP4U">Watch on YouTube</a>.</video></div>
+      <div class="film-footer"><p>Recorded local execution. Edited for clarity, with AI narration and English captions.</p><a class="text-link" href="https://youtu.be/hwYgd1PSP4U">Open on YouTube <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="build-section wrap" aria-labelledby="build-title">
+      <div class="build-intro"><h2 id="build-title">A small demo.<br>Real work underneath.</h2><p>Switch carries the agent conversations and native owner replies. Relay supplies the scoped tools, review gates, and verified recovery.</p><a class="button primary" href="https://github.com/Krishna3451/relay-switch#run-locally">Run it locally <span aria-hidden="true">↗</span></a></div>
+      <dl class="build-facts"><div><dt>12</dt><dd>Live model calls in the recorded native run.</dd></div><div><dt>6</dt><dd>Reviewed findings and results released through Switch.</dd></div><div><dt>24/24</dt><dd>Messages delivered after both companies’ repairs.</dd></div><div><dt>54</dt><dd>Local unit tests passed on the published implementation.</dd></div></dl>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><div><a class="brand" href="#main"><span class="brand-mark" aria-hidden="true">R</span>Relay</a><p>Two companies. One recovery.</p></div><div class="disclosure"><p>TeamChat and HarborCloud are fictional. One presenter roleplays both owners; approval inputs are scripted. The recorded model calls, Switch messages, HTTP failures, repairs, and checks are real.</p><p>This site is a static showcase. The interactive walkthrough is illustrative. The executable demo runs locally with Switch and Mattermost; it is not a production deployment or a measured speed comparison.</p><a href="https://github.com/Krishna3451/relay-switch">Source, setup &amp; evidence <span aria-hidden="true">↗</span></a></div></footer>
+</body>
+</html>
