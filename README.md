@@ -228,6 +228,10 @@ runtime** with a configured, running **Mattermost bridge**. It also requires an
 authenticated **Codex CLI** on `PATH` (or set `CODEX_BIN`). This is a local
 operator setup, not a portable production deployment.
 
+For Switch room concepts and account setup, see the
+[official Switch getting-started guide](https://docs.switchagents.ai/switch-rooms/getting-started).
+Relay's native adapter still requires the local runtime described here.
+
 Enrollment requires access to the local Switch runtime metadata and creates
 fictional identities and private channels in that local demo tenant. Use a
 workspace where you are authorized to do so. The runtime and bundle paths can
