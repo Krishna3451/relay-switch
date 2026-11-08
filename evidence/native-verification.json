@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "checks": {
+    "allNativeStagesComplete": true,
+    "sourceAndExactReviewThreadsBound": true,
+    "bothOwnersExecuted": true,
+    "actualSeparateLiveModelContexts": true,
+    "gatewayHealthyWhileFreshChatDegraded": true,
+    "appRecovery24of24BeforeRetry": true,
+    "fresh24of24AndSLO": true,
+    "originalFailedMessageSameIdBodyRetry": true,
+    "bothRolesClosed": true,
+    "roomScopes": true,
+    "knownCredentialOccurrencesZero": true
+  },
+  "participation": "Scripted presenter roleplay in two actual enrolled human accounts; actual scoped live agents and Switch events.",
+  "modelCalls": 12,
+  "distinctThreads": 12,
+  "summedInferenceSeconds": 92.339,
+  "actualReleases": 6,
+  "nativeSourceReplies": 9,
+  "sourceHashes": {
+    "agents/__init__.py": "1ff555596a2f470bbac99102000acdfe6f9be3b5179f99fabf86aea354850e45",
+    "agents/bootstrap.py": "143e5adcb2e40d190c3ba7572fc83b433160ec5b10ab761edfd53940014ef3a2",
+    "agents/bridge.py": "c9fdbc08eb7cac031d4b2224f6ce40f92780496813ca2f003b442b9407f52d6e",
+    "agents/model.py": "c72d52c04bda4d65015d52a8fb455bdfa6cab238d8d0b27dec6c247e027b1497",
+    "agents/native.py": "60fc60a293aea82d6125da1ad1a7d600dafef8f5693f677e5f02803a2a509e1e",
+    "agents/native_audit.py": "3bc01f3a3374f9f03b0cff93baa953bc414866989139466eaf70626c7bc8c703",
+    "agents/native_display.py": "d4036b0a419c8df383228e20e73cd0f454a678a91abd79697eaf92beafa100eb",
+    "agents/native_enroll.py": "27268136b9bc4a2cc209461be0487d7ab37659d4b60d9c2913053f7e2473350f",
+    "agents/native_setup.py": "5b23029634f2fc9627d27ff0e6a410ff5cc276ec6273d3d4cb97e87ecf04ff2d",
+    "agents/native_transport.py": "69b26887abda23a8e0e5a886b875001aa69880a6bff9a41681ee55be47c00af5",
+    "agents/relay.py": "bd7af72b3ebc8a690c876a9c718165a63593336b9ce41563463832f3f327208f",
+    "agents/switch_client.py": "f81ff14eeaa9713921477c77c3aa4800f67e82d7999aeed3c1e892efdc83c268",
+    "agents/verify.py": "031778b605032991ad7ba3ae5b2e7d107001f35b342065ba36de9e58fdee6a2a"
+  },
+  "before": {
+    "status": "degraded",
+    "testedAt": "2026-11-08T01:54:12.557+00:00",
+    "attempted": 24,
+    "delivered": 13,
+    "successRate": 0.5417,
+    "p95LatencyMs": 781.03,
+    "durationMs": 1430.62,
+    "concurrency": 12,
+    "sloMs": 1100
+  },
+  "partial": {
+    "status": "degraded",
+    "testedAt": "2026-11-08T01:55:06.008+00:00",
+    "attempted": 24,
+    "delivered": 15,
+    "successRate": 0.625,
+    "p95LatencyMs": 823.19,
+    "durationMs": 1646.5,
+    "concurrency": 12,
+    "sloMs": 1100
+  },
+  "appRecovery": {
+    "status": "healthy",
+    "testedAt": "2026-11-08T01:55:46.348+00:00",
+    "attempted": 24,
+    "delivered": 24,
+    "successRate": 1.0,
+    "p95LatencyMs": 355.58,
+    "durationMs": 569.52,
+    "concurrency": 12,
+    "sloMs": 1100
+  },
+  "final": {
+    "status": "healthy",
+    "testedAt": "2026-11-08T01:56:43.404+00:00",
+    "attempted": 24,
+    "delivered": 24,
+    "successRate": 1.0,
+    "p95LatencyMs": 341.11,
+    "durationMs": 469.69,
+    "concurrency": 12,
+    "sloMs": 1100
+  },
+  "gatewayCanary": {
+    "status": "healthy",
+    "testedAt": "2026-11-08T01:55:04.359+00:00",
+    "concurrency": 6,
+    "attempted": 6,
+    "succeeded": 6,
+    "scope": "Six actual concurrent gateway-to-backend readiness requests; does not establish TeamChat message delivery."
+  },
+  "retry": {
+    "originalFailed": true,
+    "delivered": true,
+    "persistedRows": 1,
+    "sameIdAndBody": true,
+    "repeatedRequestRecognizedAsDuplicate": true
+  },
+  "publication": {
+    "kind": "sanitized-public-summary",
+    "original_artifact_sha256": "ef3fe0d3f2e9507f219389f96df12c05d63169fa92b4215baae7acd3ea0040f2",
+    "omitted": [
+      "native and coordination transcripts",
+      "account/room/source-post/message IDs",
+      "private room URLs",
+      "individual HTTP response rows",
+      "token usage metadata"
+    ],
+    "note": "Recorded aggregate outcomes are unchanged. The original private artifact is retained locally; this summary is not an independent attestation."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "video": "demo/final-v3/delivery/Relay-final.mp4",
+  "frames": [
+    {
+      "label": "01-hook",
+      "time": 1,
+      "file": "demo/final-v3/qa/01-hook.png",
+      "sha256": "7ea6a0c3f1aa41e6281d9d7f3bfc007b0059fd491ee70c7f5b772b01ea870df5"
+    },
+    {
+      "label": "02-companies",
+      "time": 6.76,
+      "file": "demo/final-v3/qa/02-companies.png",
+      "sha256": "bd6ba8cffebbb6e32bf10f3c68bb600f7160436b41bc3d6d45ff86ec33a40da8"
+    },
+    {
+      "label": "03-private-records",
+      "time": 13.798000000000002,
+      "file": "demo/final-v3/qa/03-private-records.png",
+      "sha256": "50327dbcffe730a71fdcfad96c38b06c76e949c01fdc34d4e4142678f594e678"
+    },
+    {
+      "label": "04-review-gate",
+      "time": 19.442,
+      "file": "demo/final-v3/qa/04-review-gate.png",
+      "sha256": "229cf5c28fd74d39ca9b5f4161a1ae28b859641926c457a84c4f66c734635d82"
+    },
+    {
+      "label": "05-relay",
+      "time": 30.828,
+      "file": "demo/final-v3/qa/05-relay.png",
+      "sha256": "049215af148adb36ae25d482f6cd59311f53c5bc6650054d220d7d0e4b6c4480"
+    },
+    {
+      "label": "06-private-context",
+      "time": 60.945,
+      "file": "demo/final-v3/qa/06-private-context.png",
+      "sha256": "858008c1989d2de31c3ac5f93ee9bb2b274dc2ffbae25002fda7449de166f259"
+    },
+    {
+      "label": "07-owner-share",
+      "time": 71.219,
+      "file": "demo/final-v3/qa/07-owner-share.png",
+      "sha256": "78d536cbd70e7447eeddb408e1a6fd23806303865614545eef21e7328cbc5315"
+    },
+    {
+      "label": "08-same-finding",
+      "time": 77.848,
+      "file": "demo/final-v3/qa/08-same-finding.png",
+      "sha256": "65dd0204ac2fe8d51291094613da3e665a8dbb10c4c7924f4ec04484cfb05911"
+    },
+    {
+      "label": "09-cloud-approval",
+      "time": 88.55,
+      "file": "demo/final-v3/qa/09-cloud-approval.png",
+      "sha256": "79e1305b996cf2c791bea4fcc8ec364c8cc7267ae87079ab796b768d9e056662"
+    },
+    {
+      "label": "10-partial",
+      "time": 96.358,
+      "file": "demo/final-v3/qa/10-partial.png",
+      "sha256": "ed9e20925e93f5ba3ba492b53fc08bbbfb3c63d3eb55db0b3a43bcf9b21b8b52"
+    },
+    {
+      "label": "11-app-approval",
+      "time": 108.532,
+      "file": "demo/final-v3/qa/11-app-approval.png",
+      "sha256": "c7473c28546e7addfa9388226afd8372f31afb25250d125416588a939c713656"
+    },
+    {
+      "label": "12-all-pass",
+      "time": 118.149,
+      "file": "demo/final-v3/qa/12-all-pass.png",
+      "sha256": "11549cbf7447ad73140b4a0114d94d2e0445a6ec52f0e72be17954e35af9e37d"
+    },
+    {
+      "label": "13-retry",
+      "time": 129.744,
+      "file": "demo/final-v3/qa/13-retry.png",
+      "sha256": "d096a9829884648d4e51340f4d1051af88a0cd9d419d1f6eb6f333cd638e6ddd"
+    },
+    {
+      "label": "14-governance",
+      "time": 139.288,
+      "file": "demo/final-v3/qa/14-governance.png",
+      "sha256": "b61705d6486adeccbd1cb28d02664998507eb5b7ce1c1d3cd58782866e9363aa"
+    },
+    {
+      "label": "15-maya-report",
+      "time": 44.481,
+      "file": "demo/final-v3/qa/15-maya-report.png",
+      "sha256": "097d041ed4303f6c49f0e9ba416512605f6ecd926f12b34aaa3a0001d7d22a0b"
+    },
+    {
+      "label": "16-leo-presence",
+      "time": 48.054,
+      "file": "demo/final-v3/qa/16-leo-presence.png",
+      "sha256": "8fba31cc152ca45a56020ba9828dfe76e3b3be403535d98670f16ffffcf10d7c"
+    },
+    {
+      "label": "17-shared-arrival",
+      "time": 75.548,
+      "file": "demo/final-v3/qa/17-shared-arrival.png",
+      "sha256": "1146b23dd307f710824448e9c2dfa43450e7f8692780a30adb83b5316fd7e4d6"
+    },
+    {
+      "label": "18-app-change",
+      "time": 110.923,
+      "file": "demo/final-v3/qa/18-app-change.png",
+      "sha256": "186045359240c8fe7807bf6afe76aab90153e82fa0e8a16a641c7895f6816b53"
+    },
+    {
+      "label": "19-closing-title",
+      "time": 147.866,
+      "file": "demo/final-v3/qa/19-closing-title.png",
+      "sha256": "6bdd3d7f1d4e39205bd08ea43aa11734ac2ff07b25a0ccfd83a7876f3268d2c8"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "relay-incident-demo",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m engine.server",
+    "engine": "python3 -m engine.server",
+    "proof": "python3 -m engine.proof",
+    "test": "python3 -m unittest discover -s tests -v"
+  }
+}

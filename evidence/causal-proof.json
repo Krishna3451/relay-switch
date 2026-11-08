@@ -1,0 +1,82 @@
+{
+  "createdAt": "2026-11-08T00:27:11.162+00:00",
+  "mechanism": "Actual HTTP admission timeout and failed readiness allocations; logical workers, not EC2 or packet simulation",
+  "fixedWorkload": {
+    "messages": 24,
+    "concurrency": 12,
+    "sloMs": 1100
+  },
+  "allPassed": true,
+  "arms": [
+    {
+      "arm": "neither",
+      "measurement": {
+        "status": "degraded",
+        "testedAt": "2026-11-08T00:26:52.283+00:00",
+        "attempted": 24,
+        "delivered": 14,
+        "successRate": 0.5833,
+        "p95LatencyMs": 770.3,
+        "durationMs": 1593.19,
+        "concurrency": 12,
+        "sloMs": 1100
+      },
+      "assertion": true
+    },
+    {
+      "arm": "app_only",
+      "measurement": {
+        "status": "degraded",
+        "testedAt": "2026-11-08T00:26:58.648+00:00",
+        "attempted": 24,
+        "delivered": 14,
+        "successRate": 0.5833,
+        "p95LatencyMs": 782.09,
+        "durationMs": 1592.15,
+        "concurrency": 12,
+        "sloMs": 1100
+      },
+      "assertion": true
+    },
+    {
+      "arm": "cloud_only",
+      "measurement": {
+        "status": "degraded",
+        "testedAt": "2026-11-08T00:27:04.445+00:00",
+        "attempted": 24,
+        "delivered": 14,
+        "successRate": 0.5833,
+        "p95LatencyMs": 788.81,
+        "durationMs": 1577.74,
+        "concurrency": 12,
+        "sloMs": 1100
+      },
+      "assertion": true
+    },
+    {
+      "arm": "both",
+      "measurement": {
+        "status": "healthy",
+        "testedAt": "2026-11-08T00:27:10.538+00:00",
+        "attempted": 24,
+        "delivered": 24,
+        "successRate": 1.0,
+        "p95LatencyMs": 347.01,
+        "durationMs": 499.54,
+        "concurrency": 12,
+        "sloMs": 1100
+      },
+      "assertion": true
+    }
+  ],
+  "publication": {
+    "kind": "sanitized-public-summary",
+    "original_artifact_sha256": "99eb2dd335d2677886ebccb89604428b770fbd0a876cd79c94c1e193fa7f4b63",
+    "omitted": [
+      "individual message/allocation IDs and rows",
+      "raw diagnostic snapshots",
+      "operation receipts"
+    ],
+    "note": "Recorded aggregate outcomes are unchanged. The original private artifact is retained locally; this summary is not an independent attestation."
+  }
+}

@@ -1,0 +1,9 @@
+You send an important message. The other person never gets it.
+
+This is happening on TeamChat, a messaging app for people and teams. TeamChat relies on HarborCloud, a cloud platform.
+
+Each team can investigate only its own systems. Engineers pass questions and findings back and forth, trying to piece together what went wrong.
+
+Relay brings their agents together through Switch. Each agent investigates its own side. People approve what gets shared and changed. Both teams check that messages are arriving again.
+
+Here’s how.

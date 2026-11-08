@@ -1,0 +1,68 @@
+RELAY V3 — RECORDABLE ACTIONS INSIDE THE ACCEPTED FIVE-PART FRAMEWORK
+
+STATUS
+For script review. Native command wiring remains future work. No recording,
+voice generation, code changes or chat posts were performed in this revision.
+
+PRIORITY
+Keep parts1–3 short. Most screen time belongs to the live solution sequence.
+Use the shared Mattermost incident thread as the visual anchor. Briefly visit
+private rooms for meaningful owner review, then return to the shared thread.
+Mattermost is the coordination app; TeamChat is the affected service.
+
+HUMAN INPUTS / AGENT RESULTS / WHAT TO CAPTURE
+
+1. SHARED INCIDENT
+   Maya: “Customers are reporting failed TeamChat messages. @TeamChat Agent,
+   can you investigate?”
+   Leo: “We’re here from HarborCloud.”
+   Capture the agent's actual acknowledgment/working notice and its arrival.
+
+2. TEAMCHAT PRIVATE REVIEW
+   Agent inspects its own service and presents a supported finding and focused
+   question. Maya replies “Share with HarborCloud” in that proposal's thread.
+   Keep technical details subordinate to what is failing and what help is needed.
+
+3. SHARED INCIDENT
+   The approved question arrives through actual Switch delivery and triggers
+   HarborCloud Agent. Capture its actual working notice before the result.
+
+4. HARBORCLOUD PRIVATE REVIEW
+   Agent explains measured overload and proposes a scoped capacity increase.
+   Leo replies “Approve this change” in the exact proposal's thread.
+   Capture approval, operation execution, measured result and reviewed release.
+
+5. SHARED INCIDENT — ESSENTIAL TURNING POINT
+   Show BOTH actual checks together: cloud connection passes; a FRESH chat
+   workload still fails. An older missing message alone is not proof that the
+   application remains broken; it may simply need retrying.
+
+6. TEAMCHAT PRIVATE REVIEW
+   Agent uses the returned cloud result and current local evidence to propose
+   recovering only failed service starts. Maya replies “Approve this change”
+   in that proposal's thread. Capture its actual execution and verification.
+
+7. SHARED INCIDENT
+   Reviewed results arrive: all24messages in the fixed test workload delivered.
+   Both companies' final findings identify their own intervention and limits.
+   Include additional disclosure reviews where needed; do not imply a finding
+   crossed before its owner approved it.
+
+8. EARLIER FAILED-MESSAGE THREAD
+   The case identifies one truly failed workload message. Maya replies
+   “Retry this message” beneath that record. Execute the normal HTTP retry with
+   its unchanged ID/body and show the real persistence/deduplication result.
+
+RECORDING RULE
+Human inputs can be scripted. Agent wording comes from actual live inference;
+the lines above specify intended meaning and allowed actions, not invented bot
+dialogue. Reconcile narration with the recorded findings before final voiceover.
+Capture all messages from before arrival. Preserve actual working/arrival
+cadence, cut reviewed static waits, and leave time to read key results.
+
+ACCEPTANCE BEFORE FILMING
+Verify the full native Mattermost flow without custom dashboard controls.
+Native owner replies must be genuine source-bound posts; the bridge must not
+post approval on the owner's behalf. Digests/revisions/expiry stay internal.
+Record actual delivery counts and never label a successful human message as
+failed. The final24/24 claim is conditional on verifying that filmed outcome.

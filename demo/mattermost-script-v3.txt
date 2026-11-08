@@ -1,0 +1,45 @@
+1. THE PROBLEM
+
+Customers are sending messages. Some arrive. Others fail.
+
+TeamChat runs the messaging app. HarborCloud runs the cloud connection behind it. Fixing the customer’s problem requires work inside both companies.
+
+2. THE EXISTING SOLUTION
+
+Engineers investigate their own systems, open a support case, and exchange findings through chat. They use dashboards and APIs to diagnose problems and make changes.
+
+3. WHY IT FALLS SHORT
+
+The coordination still depends on people carrying questions, evidence, and results between teams.
+
+Each company can fix its own part without knowing whether the customer’s problem is resolved. The cloud connection can be healthy while TeamChat still cannot deliver messages reliably.
+
+4. OUR SOLUTION — LIVE MATTERMOST DEMO
+
+Relay connects each company’s agent through Switch, inside Mattermost. Each investigates its own systems, and each owner controls changes to their side.
+
+Maya reports the problem in the shared incident channel and asks TeamChat’s agent to investigate. Leo, HarborCloud’s engineer, replies that his team is available.
+
+TeamChat’s agent acknowledges the request and starts checking its service. In Maya’s private workroom, it reports connection failures and parts of the message service that failed to start. It prepares a focused question for HarborCloud.
+
+Maya reviews the question and replies, “Share with HarborCloud.”
+
+That question arrives in the shared incident thread. HarborCloud’s agent receives it through Switch and starts its own investigation.
+
+It finds the overloaded connection and proposes more capacity. Leo reviews the change in his company’s private thread and replies, “Approve this change.”
+
+The agent applies the change. Its result returns to the shared incident: the cloud connection check passes, but a fresh message-delivery check still fails.
+
+TeamChat’s agent uses that result to identify what remains. It proposes recovering the failed parts of its own message service. Maya reviews the proposal and approves it in the same thread.
+
+The agent performs the recovery. The reviewed findings and test results return to the shared incident, where both teams can follow the outcome.
+
+5. THE PAYOFF
+
+Run the same delivery test again: 24 messages sent, 24 arrived.
+
+Maya asks the agent to retry an earlier message that genuinely failed. It retries that same message and confirms delivery.
+
+Both teams can see the findings, approvals, changes, and verified result in the incident conversation.
+
+Relay. Two teams. One recovery.

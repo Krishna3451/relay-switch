@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-11-08T03:06:19.127615+00:00",
+  "scope": "Current publication-hardening verification; distinct from historical recorded native take03 evidence.",
+  "tests": {
+    "backend": 16,
+    "agents": 38,
+    "total": 54,
+    "passed": true
+  },
+  "cliHelpSmoke": [
+    "agents.bootstrap",
+    "agents.native_enroll",
+    "agents.native"
+  ],
+  "syntaxParsedFiles": 22,
+  "offlineRecordedReviewReplay": {
+    "acceptedReviews": 6,
+    "passed": true,
+    "liveModelCalls": 0,
+    "SwitchPosts": 0
+  },
+  "causalProof": {
+    "allPassed": true,
+    "fixedWorkload": {
+      "messages": 24,
+      "concurrency": 12,
+      "sloMs": 1100
+    },
+    "arms": [
+      {
+        "arm": "neither",
+        "delivered": 14,
+        "attempted": 24,
+        "p95LatencyMs": 782.35,
+        "passed": true
+      },
+      {
+        "arm": "app_only",
+        "delivered": 14,
+        "attempted": 24,
+        "p95LatencyMs": 792.49,
+        "passed": true
+      },
+      {
+        "arm": "cloud_only",
+        "delivered": 14,
+        "attempted": 24,
+        "p95LatencyMs": 776.62,
+        "passed": true
+      },
+      {
+        "arm": "both",
+        "delivered": 24,
+        "attempted": 24,
+        "p95LatencyMs": 333.34,
+        "passed": true
+      }
+    ]
+  },
+  "sourceHashes": {
+    "agents/README.md": "eb8351dcd0e70d83fbe726ee8b77703ba581e11aaa0de34286f8db7a0b29503f",
+    "agents/__init__.py": "1ff555596a2f470bbac99102000acdfe6f9be3b5179f99fabf86aea354850e45",
+    "agents/bootstrap.py": "c3a1ced8dd0dc624b5362d12bae183b877fa968d93ac881c4388c4d63a4c1df1",
+    "agents/bridge.py": "42eb30519064df60919de359800d05c1327512b33f31f00cee4bf2a392854b5e",
+    "agents/model.py": "ec6a9a3aec6eb26b5f068e6c3f2b3b98721c02a5f9210e2c7f981f33451528af",
+    "agents/native.py": "194bd0ff10681b2a054fa104b0520a912aa8e64ba940fdc698fa67711c9e5c29",
+    "agents/native_audit.py": "3bc01f3a3374f9f03b0cff93baa953bc414866989139466eaf70626c7bc8c703",
+    "agents/native_display.py": "d4036b0a419c8df383228e20e73cd0f454a678a91abd79697eaf92beafa100eb",
+    "agents/native_enroll.py": "c486298228cf872ec390772dbd2f3cee4b3d1f69660e0af0412d386b3852c64f",
+    "agents/native_setup.py": "56762e959a0301c5fb9897fb83897f6b2a938f666386fc7877bf773d9224f75b",
+    "agents/native_transport.py": "fc8b735943f1787e1b1dd1f756e10f6652f7eea6b2854a9ada063acc8293e670",
+    "agents/relay.py": "bd7af72b3ebc8a690c876a9c718165a63593336b9ce41563463832f3f327208f",
+    "agents/switch_client.py": "f81ff14eeaa9713921477c77c3aa4800f67e82d7999aeed3c1e892efdc83c268",
+    "agents/verify.py": "031778b605032991ad7ba3ae5b2e7d107001f35b342065ba36de9e58fdee6a2a",
+    "engine/__init__.py": "218953e899dfc09b167a8be1f2243a2546da3190cbb1cb6801b252b57e1aee90",
+    "engine/http_boundary.py": "dde4f9dee4f1a85fb2fbee9d4f7ef50874d6467cd487695a1caca369fffa11e5",
+    "engine/proof.py": "f94ee736fcd0bd3b2226cfd71e56c4d0a09aa419331bba17744d1080581dfaf7",
+    "engine/server.py": "d36bc01d7b6802d43bef10f669455e368ca765e5fb145f12cc92843de785b5b1",
+    "tests/test_engine.py": "ab742142598d16d0f1fc27e3814357329b6d6e92942f0e1bf12ae9cb303387fb",
+    "tests/test_http_boundary.py": "8ac9b93b98d8d0c090e4ebedcdf07bdc776470efaa56995e60d1656c0e51804b",
+    "tests_agents/test_boundaries.py": "10477d773ae5a228e0e4cc5e53658c1832682e2f204f7d08f19583c5e52c6638",
+    "tests_agents/test_native.py": "3a21845cb949cec4e94bbdcda37df096db80490ee4ee777d102585df4bfe29bc",
+    "tests_agents/test_submission.py": "9778a179680932e789ea2b86508e4a221fa15a3f7664dc3ad4cf73f7a1ca378e"
+  },
+  "limitations": [
+    "Installed macOS Switch Console adapter is still required for native enrollment; no new live enrollment/model run was performed.",
+    "Origin-less local callers, presenter and host/service administrators are trusted. This is not OS isolation or production multi-tenant security.",
+    "Human review is the disclosure boundary for visible text; metadata is minimized/validated, not encrypted or a universal secret/PII detector.",
+    "No superiority or speed advantage over an agent granted equivalent access is established."
+  ]
+}

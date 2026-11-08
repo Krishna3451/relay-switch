@@ -1,0 +1,2767 @@
+{
+  "createdAt": "2026-11-08T02:56:32.573+00:00",
+  "mechanism": "Actual HTTP admission timeout and failed readiness allocations; logical workers, not EC2 or packet simulation",
+  "fixedWorkload": {
+    "messages": 24,
+    "concurrency": 12,
+    "sloMs": 1100
+  },
+  "arms": [
+    {
+      "arm": "neither",
+      "initialOrdinaryMessage": {
+        "ok": true,
+        "id": "original-message",
+        "status": 200,
+        "latencyMs": 106.4,
+        "duplicate": false,
+        "error": null
+      },
+      "incident": {
+        "id": "load_8bb904dd",
+        "status": "degraded",
+        "testedAt": "2026-11-08T02:56:11.028+00:00",
+        "attempted": 24,
+        "delivered": 13,
+        "successRate": 0.5417,
+        "p95LatencyMs": 775.53,
+        "durationMs": 1452.34,
+        "concurrency": 12,
+        "sloMs": 1100,
+        "appRevision": 16,
+        "cloudRevision": 1
+      },
+      "before": {
+        "app": {
+          "role": "app",
+          "company": "TeamChat",
+          "at": "2026-11-08T02:56:11.029+00:00",
+          "revision": 16,
+          "targetWorkers": 4,
+          "maxAllocations": 6,
+          "readyWorkers": 1,
+          "busyWorkers": 0,
+          "allocations": [
+            {
+              "id": "worker_52be8ba8",
+              "status": "ready",
+              "createdAt": "2026-11-08T02:56:09.036+00:00",
+              "checkedAt": "2026-11-08T02:56:09.147+00:00",
+              "lastError": null,
+              "readinessMs": 111.54
+            },
+            {
+              "id": "worker_5fcf288d",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:09.148+00:00",
+              "checkedAt": "2026-11-08T02:56:10.069+00:00",
+              "lastError": "Actual backend readiness request failed after serving timeout",
+              "readinessMs": 102.29
+            },
+            {
+              "id": "worker_43766acd",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:09.252+00:00",
+              "checkedAt": "2026-11-08T02:56:10.068+00:00",
+              "lastError": "Actual backend readiness request failed after serving timeout",
+              "readinessMs": 104.12
+            },
+            {
+              "id": "worker_1e45d420",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:09.358+00:00",
+              "checkedAt": "2026-11-08T02:56:10.072+00:00",
+              "lastError": "Actual backend readiness request failed after serving timeout",
+              "readinessMs": 108.32
+            },
+            {
+              "id": "worker_eb2e20ed",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:09.586+00:00",
+              "checkedAt": "2026-11-08T02:56:09.831+00:00",
+              "lastError": "Readiness HTTP request timed out",
+              "readinessMs": 244.68
+            },
+            {
+              "id": "worker_c13dccf7",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:09.587+00:00",
+              "checkedAt": "2026-11-08T02:56:09.834+00:00",
+              "lastError": "Readiness HTTP request timed out",
+              "readinessMs": 246.73
+            }
+          ],
+          "events": [
+            {
+              "id": "event_9eba6897a3",
+              "at": "2026-11-08T02:56:09.148+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_52be8ba8"
+            },
+            {
+              "id": "event_fabcf798f2",
+              "at": "2026-11-08T02:56:09.251+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_5fcf288d"
+            },
+            {
+              "id": "event_b40b388199",
+              "at": "2026-11-08T02:56:09.357+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_43766acd"
+            },
+            {
+              "id": "event_5f5a9bf6ab",
+              "at": "2026-11-08T02:56:09.467+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_1e45d420"
+            },
+            {
+              "id": "event_d9c59d0ba7",
+              "at": "2026-11-08T02:56:09.467+00:00",
+              "company": "TeamChat",
+              "kind": "ready",
+              "message": "Chat is serving ordinary traffic; the cloud route is at its quiet-period capacity."
+            },
+            {
+              "id": "event_9c721e4026",
+              "at": "2026-11-08T02:56:09.832+00:00",
+              "company": "TeamChat",
+              "kind": "provisioning_failed",
+              "message": "Worker's actual readiness request failed; its allocation still occupies a pool slot.",
+              "allocationId": "worker_eb2e20ed"
+            },
+            {
+              "id": "event_2534739df4",
+              "at": "2026-11-08T02:56:09.834+00:00",
+              "company": "TeamChat",
+              "kind": "provisioning_failed",
+              "message": "Worker's actual readiness request failed; its allocation still occupies a pool slot.",
+              "allocationId": "worker_c13dccf7"
+            },
+            {
+              "id": "event_77c0f9313e",
+              "at": "2026-11-08T02:56:10.068+00:00",
+              "company": "TeamChat",
+              "kind": "worker_failed",
+              "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+              "allocationId": "worker_43766acd"
+            },
+            {
+              "id": "event_58193e543f",
+              "at": "2026-11-08T02:56:10.070+00:00",
+              "company": "TeamChat",
+              "kind": "worker_failed",
+              "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+              "allocationId": "worker_5fcf288d"
+            },
+            {
+              "id": "event_277effccda",
+              "at": "2026-11-08T02:56:10.073+00:00",
+              "company": "TeamChat",
+              "kind": "worker_failed",
+              "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+              "allocationId": "worker_1e45d420"
+            }
+          ],
+          "allowedOperation": "reconcile_failed_allocations",
+          "operationContract": "Name only terminal failed allocation IDs at this revision. Healthy, checking and provisioning allocations cannot be removed. Reprovisioning uses actual readiness HTTP at concurrency one."
+        },
+        "cloud": {
+          "role": "cloud",
+          "company": "HarborCloud",
+          "at": "2026-11-08T02:56:11.029+00:00",
+          "revision": 1,
+          "capacity": 1,
+          "inFlight": 0,
+          "admitted": 18,
+          "rejected": 8,
+          "gatewayCanary": {
+            "status": "unmeasured",
+            "testedAt": null
+          },
+          "maximumAllowedCapacity": 16,
+          "validationContract": {
+            "gatewayConnectionCheck": {
+              "simultaneousRequests": 6,
+              "requiredSuccesses": 6,
+              "successCondition": "Every simultaneous real gateway-to-backend readiness request must succeed before this connection is called healthy.",
+              "scope": "HarborCloud's declared recovery check for this dedicated route; it does not establish TeamChat message delivery."
+            }
+          },
+          "events": [
+            {
+              "id": "event_4b65e3e13b",
+              "at": "2026-11-08T02:56:09.584+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_3812407f19",
+              "at": "2026-11-08T02:56:09.584+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_65182e388d",
+              "at": "2026-11-08T02:56:09.586+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_38018c6902",
+              "at": "2026-11-08T02:56:09.587+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_c49d8be623",
+              "at": "2026-11-08T02:56:09.588+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_93ec493320",
+              "at": "2026-11-08T02:56:09.827+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_4e79ad7a09",
+              "at": "2026-11-08T02:56:09.829+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_e809a4f0af",
+              "at": "2026-11-08T02:56:09.833+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            }
+          ],
+          "allowedOperation": "increase_gateway_capacity",
+          "operationContract": "Propose a bounded integer capacity increase for this dedicated local route. Cannot inspect or change TeamChat allocations or messages."
+        }
+      },
+      "operations": [],
+      "retriedFailedMessage": null,
+      "measurement": {
+        "id": "load_72901e74",
+        "status": "degraded",
+        "testedAt": "2026-11-08T02:56:12.623+00:00",
+        "attempted": 24,
+        "delivered": 14,
+        "successRate": 0.5833,
+        "p95LatencyMs": 782.35,
+        "durationMs": 1594.51,
+        "concurrency": 12,
+        "sloMs": 1100,
+        "appRevision": 16,
+        "cloudRevision": 1
+      },
+      "after": {
+        "app": {
+          "readyWorkers": 1,
+          "failedAllocations": 5,
+          "totalAllocations": 6,
+          "maxAllocations": 6,
+          "revision": 16,
+          "status": "under_capacity"
+        },
+        "cloud": {
+          "revision": 1,
+          "capacity": 1,
+          "inFlight": 0,
+          "admitted": 32,
+          "rejected": 8,
+          "status": "unmeasured",
+          "gatewayCanary": {
+            "status": "unmeasured",
+            "testedAt": null
+          }
+        },
+        "health": {
+          "id": "load_72901e74",
+          "status": "degraded",
+          "testedAt": "2026-11-08T02:56:12.623+00:00",
+          "attempted": 24,
+          "delivered": 14,
+          "successRate": 0.5833,
+          "p95LatencyMs": 782.35,
+          "durationMs": 1594.51,
+          "concurrency": 12,
+          "sloMs": 1100,
+          "appRevision": 16,
+          "cloudRevision": 1,
+          "fresh": true
+        }
+      },
+      "assertion": true
+    },
+    {
+      "arm": "app_only",
+      "initialOrdinaryMessage": {
+        "ok": true,
+        "id": "original-message",
+        "status": 200,
+        "latencyMs": 108.23,
+        "duplicate": false,
+        "error": null
+      },
+      "incident": {
+        "id": "load_f1fd0cdb",
+        "status": "degraded",
+        "testedAt": "2026-11-08T02:56:15.501+00:00",
+        "attempted": 24,
+        "delivered": 13,
+        "successRate": 0.5417,
+        "p95LatencyMs": 774.71,
+        "durationMs": 1441.07,
+        "concurrency": 12,
+        "sloMs": 1100,
+        "appRevision": 16,
+        "cloudRevision": 1
+      },
+      "before": {
+        "app": {
+          "role": "app",
+          "company": "TeamChat",
+          "at": "2026-11-08T02:56:15.501+00:00",
+          "revision": 16,
+          "targetWorkers": 4,
+          "maxAllocations": 6,
+          "readyWorkers": 1,
+          "busyWorkers": 0,
+          "allocations": [
+            {
+              "id": "worker_23807671",
+              "status": "ready",
+              "createdAt": "2026-11-08T02:56:13.523+00:00",
+              "checkedAt": "2026-11-08T02:56:13.627+00:00",
+              "lastError": null,
+              "readinessMs": 103.07
+            },
+            {
+              "id": "worker_45bfc620",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:13.629+00:00",
+              "checkedAt": "2026-11-08T02:56:14.549+00:00",
+              "lastError": "Actual backend readiness request failed after serving timeout",
+              "readinessMs": 104.88
+            },
+            {
+              "id": "worker_db6cd0b5",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:13.735+00:00",
+              "checkedAt": "2026-11-08T02:56:14.551+00:00",
+              "lastError": "Actual backend readiness request failed after serving timeout",
+              "readinessMs": 107.48
+            },
+            {
+              "id": "worker_9bd8e4fa",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:13.843+00:00",
+              "checkedAt": "2026-11-08T02:56:14.554+00:00",
+              "lastError": "Actual backend readiness request failed after serving timeout",
+              "readinessMs": 106.42
+            },
+            {
+              "id": "worker_d05e60c5",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:14.065+00:00",
+              "checkedAt": "2026-11-08T02:56:14.310+00:00",
+              "lastError": "Readiness HTTP request timed out",
+              "readinessMs": 244.12
+            },
+            {
+              "id": "worker_3461c1ed",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:14.066+00:00",
+              "checkedAt": "2026-11-08T02:56:14.311+00:00",
+              "lastError": "Readiness HTTP request timed out",
+              "readinessMs": 244.63
+            }
+          ],
+          "events": [
+            {
+              "id": "event_8b2a91cdcc",
+              "at": "2026-11-08T02:56:13.628+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_23807671"
+            },
+            {
+              "id": "event_4d652fdaa0",
+              "at": "2026-11-08T02:56:13.734+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_45bfc620"
+            },
+            {
+              "id": "event_583db118bd",
+              "at": "2026-11-08T02:56:13.843+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_db6cd0b5"
+            },
+            {
+              "id": "event_c34b4f43b7",
+              "at": "2026-11-08T02:56:13.950+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_9bd8e4fa"
+            },
+            {
+              "id": "event_a67938d7c5",
+              "at": "2026-11-08T02:56:13.950+00:00",
+              "company": "TeamChat",
+              "kind": "ready",
+              "message": "Chat is serving ordinary traffic; the cloud route is at its quiet-period capacity."
+            },
+            {
+              "id": "event_78a5f06696",
+              "at": "2026-11-08T02:56:14.310+00:00",
+              "company": "TeamChat",
+              "kind": "provisioning_failed",
+              "message": "Worker's actual readiness request failed; its allocation still occupies a pool slot.",
+              "allocationId": "worker_d05e60c5"
+            },
+            {
+              "id": "event_3e73a087b8",
+              "at": "2026-11-08T02:56:14.311+00:00",
+              "company": "TeamChat",
+              "kind": "provisioning_failed",
+              "message": "Worker's actual readiness request failed; its allocation still occupies a pool slot.",
+              "allocationId": "worker_3461c1ed"
+            },
+            {
+              "id": "event_6ca4730204",
+              "at": "2026-11-08T02:56:14.550+00:00",
+              "company": "TeamChat",
+              "kind": "worker_failed",
+              "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+              "allocationId": "worker_45bfc620"
+            },
+            {
+              "id": "event_9af596ee33",
+              "at": "2026-11-08T02:56:14.551+00:00",
+              "company": "TeamChat",
+              "kind": "worker_failed",
+              "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+              "allocationId": "worker_db6cd0b5"
+            },
+            {
+              "id": "event_a4b7014cb1",
+              "at": "2026-11-08T02:56:14.555+00:00",
+              "company": "TeamChat",
+              "kind": "worker_failed",
+              "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+              "allocationId": "worker_9bd8e4fa"
+            }
+          ],
+          "allowedOperation": "reconcile_failed_allocations",
+          "operationContract": "Name only terminal failed allocation IDs at this revision. Healthy, checking and provisioning allocations cannot be removed. Reprovisioning uses actual readiness HTTP at concurrency one."
+        },
+        "cloud": {
+          "role": "cloud",
+          "company": "HarborCloud",
+          "at": "2026-11-08T02:56:15.501+00:00",
+          "revision": 1,
+          "capacity": 1,
+          "inFlight": 0,
+          "admitted": 18,
+          "rejected": 8,
+          "gatewayCanary": {
+            "status": "unmeasured",
+            "testedAt": null
+          },
+          "maximumAllowedCapacity": 16,
+          "validationContract": {
+            "gatewayConnectionCheck": {
+              "simultaneousRequests": 6,
+              "requiredSuccesses": 6,
+              "successCondition": "Every simultaneous real gateway-to-backend readiness request must succeed before this connection is called healthy.",
+              "scope": "HarborCloud's declared recovery check for this dedicated route; it does not establish TeamChat message delivery."
+            }
+          },
+          "events": [
+            {
+              "id": "event_8312a028de",
+              "at": "2026-11-08T02:56:14.064+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_465028fe3b",
+              "at": "2026-11-08T02:56:14.064+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_86ec650da8",
+              "at": "2026-11-08T02:56:14.065+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_83959efaf4",
+              "at": "2026-11-08T02:56:14.067+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_142bd2250c",
+              "at": "2026-11-08T02:56:14.067+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_1538c2ec23",
+              "at": "2026-11-08T02:56:14.308+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_a31b54bd4b",
+              "at": "2026-11-08T02:56:14.309+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_07c82e7a59",
+              "at": "2026-11-08T02:56:14.312+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            }
+          ],
+          "allowedOperation": "increase_gateway_capacity",
+          "operationContract": "Propose a bounded integer capacity increase for this dedicated local route. Cannot inspect or change TeamChat allocations or messages."
+        }
+      },
+      "operations": [
+        {
+          "applied": true,
+          "proposalId": "proposal_a1d0920c91d0",
+          "digest": "cfe1254b55c4fd15dab109028746e959d7198ba0297d2bb4f5f0729395b73a66",
+          "observation": {
+            "role": "app",
+            "company": "TeamChat",
+            "at": "2026-11-08T02:56:15.829+00:00",
+            "revision": 23,
+            "targetWorkers": 4,
+            "maxAllocations": 6,
+            "readyWorkers": 4,
+            "busyWorkers": 0,
+            "allocations": [
+              {
+                "id": "worker_23807671",
+                "status": "ready",
+                "createdAt": "2026-11-08T02:56:13.523+00:00",
+                "checkedAt": "2026-11-08T02:56:13.627+00:00",
+                "lastError": null,
+                "readinessMs": 103.07
+              },
+              {
+                "id": "worker_907aa072",
+                "status": "ready",
+                "createdAt": "2026-11-08T02:56:15.503+00:00",
+                "checkedAt": "2026-11-08T02:56:15.605+00:00",
+                "lastError": null,
+                "readinessMs": 101.93
+              },
+              {
+                "id": "worker_8145029e",
+                "status": "ready",
+                "createdAt": "2026-11-08T02:56:15.606+00:00",
+                "checkedAt": "2026-11-08T02:56:15.719+00:00",
+                "lastError": null,
+                "readinessMs": 111.96
+              },
+              {
+                "id": "worker_bed56508",
+                "status": "ready",
+                "createdAt": "2026-11-08T02:56:15.720+00:00",
+                "checkedAt": "2026-11-08T02:56:15.827+00:00",
+                "lastError": null,
+                "readinessMs": 105.72
+              }
+            ],
+            "events": [
+              {
+                "id": "event_8b2a91cdcc",
+                "at": "2026-11-08T02:56:13.628+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_23807671"
+              },
+              {
+                "id": "event_4d652fdaa0",
+                "at": "2026-11-08T02:56:13.734+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_45bfc620"
+              },
+              {
+                "id": "event_583db118bd",
+                "at": "2026-11-08T02:56:13.843+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_db6cd0b5"
+              },
+              {
+                "id": "event_c34b4f43b7",
+                "at": "2026-11-08T02:56:13.950+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_9bd8e4fa"
+              },
+              {
+                "id": "event_a67938d7c5",
+                "at": "2026-11-08T02:56:13.950+00:00",
+                "company": "TeamChat",
+                "kind": "ready",
+                "message": "Chat is serving ordinary traffic; the cloud route is at its quiet-period capacity."
+              },
+              {
+                "id": "event_78a5f06696",
+                "at": "2026-11-08T02:56:14.310+00:00",
+                "company": "TeamChat",
+                "kind": "provisioning_failed",
+                "message": "Worker's actual readiness request failed; its allocation still occupies a pool slot.",
+                "allocationId": "worker_d05e60c5"
+              },
+              {
+                "id": "event_3e73a087b8",
+                "at": "2026-11-08T02:56:14.311+00:00",
+                "company": "TeamChat",
+                "kind": "provisioning_failed",
+                "message": "Worker's actual readiness request failed; its allocation still occupies a pool slot.",
+                "allocationId": "worker_3461c1ed"
+              },
+              {
+                "id": "event_6ca4730204",
+                "at": "2026-11-08T02:56:14.550+00:00",
+                "company": "TeamChat",
+                "kind": "worker_failed",
+                "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+                "allocationId": "worker_45bfc620"
+              },
+              {
+                "id": "event_9af596ee33",
+                "at": "2026-11-08T02:56:14.551+00:00",
+                "company": "TeamChat",
+                "kind": "worker_failed",
+                "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+                "allocationId": "worker_db6cd0b5"
+              },
+              {
+                "id": "event_a4b7014cb1",
+                "at": "2026-11-08T02:56:14.555+00:00",
+                "company": "TeamChat",
+                "kind": "worker_failed",
+                "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+                "allocationId": "worker_9bd8e4fa"
+              },
+              {
+                "id": "event_9339ced731",
+                "at": "2026-11-08T02:56:15.503+00:00",
+                "company": "TeamChat",
+                "kind": "owner_operation_applied",
+                "message": "Remove 5 named terminal failed allocations, preserve healthy workers, and reprovision toward 4 ready workers at concurrency one.",
+                "proposalId": "proposal_a1d0920c91d0",
+                "proposalDigest": "cfe1254b55c4fd15dab109028746e959d7198ba0297d2bb4f5f0729395b73a66"
+              },
+              {
+                "id": "event_0f88f89719",
+                "at": "2026-11-08T02:56:15.606+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_907aa072"
+              },
+              {
+                "id": "event_cea639f1e1",
+                "at": "2026-11-08T02:56:15.719+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_8145029e"
+              },
+              {
+                "id": "event_c3b31676fb",
+                "at": "2026-11-08T02:56:15.828+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_bed56508"
+              }
+            ],
+            "allowedOperation": "reconcile_failed_allocations",
+            "operationContract": "Name only terminal failed allocation IDs at this revision. Healthy, checking and provisioning allocations cannot be removed. Reprovisioning uses actual readiness HTTP at concurrency one."
+          },
+          "verification": {
+            "id": "load_946a67ce",
+            "status": "degraded",
+            "testedAt": "2026-11-08T02:56:17.187+00:00",
+            "attempted": 24,
+            "delivered": 12,
+            "successRate": 0.5,
+            "p95LatencyMs": 772.38,
+            "durationMs": 1357.35,
+            "concurrency": 12,
+            "sloMs": 1100,
+            "results": [
+              {
+                "ok": true,
+                "id": "load_946a67ce_0",
+                "status": 200,
+                "latencyMs": 116.74,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_946a67ce_8",
+                "status": 200,
+                "latencyMs": 220.97,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_946a67ce_2",
+                "status": 504,
+                "latencyMs": 246.95,
+                "duplicate": false,
+                "error": "Backend HTTP request timed out"
+              },
+              {
+                "ok": false,
+                "id": "load_946a67ce_7",
+                "status": 504,
+                "latencyMs": 246.5,
+                "duplicate": false,
+                "error": "Backend HTTP request timed out"
+              },
+              {
+                "ok": false,
+                "id": "load_946a67ce_1",
+                "status": 504,
+                "latencyMs": 247.45,
+                "duplicate": false,
+                "error": "Backend HTTP request timed out"
+              },
+              {
+                "ok": true,
+                "id": "load_946a67ce_10",
+                "status": 200,
+                "latencyMs": 333.37,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_946a67ce_6",
+                "status": 200,
+                "latencyMs": 441.82,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_946a67ce_3",
+                "status": 200,
+                "latencyMs": 557.32,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_946a67ce_17",
+                "status": 200,
+                "latencyMs": 337.13,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_946a67ce_5",
+                "status": 503,
+                "latencyMs": 772.38,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_946a67ce_11",
+                "status": 503,
+                "latencyMs": 768.02,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_946a67ce_9",
+                "status": 503,
+                "latencyMs": 771.14,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_946a67ce_4",
+                "status": 503,
+                "latencyMs": 770.11,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_946a67ce_18",
+                "status": 200,
+                "latencyMs": 333.96,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_946a67ce_12",
+                "status": 503,
+                "latencyMs": 766.08,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_946a67ce_14",
+                "status": 200,
+                "latencyMs": 648.58,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_946a67ce_13",
+                "status": 503,
+                "latencyMs": 770.07,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_946a67ce_23",
+                "status": 200,
+                "latencyMs": 234.77,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_946a67ce_15",
+                "status": 503,
+                "latencyMs": 767.68,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_946a67ce_16",
+                "status": 503,
+                "latencyMs": 769.69,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_946a67ce_20",
+                "status": 200,
+                "latencyMs": 447.28,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_946a67ce_21",
+                "status": 200,
+                "latencyMs": 463.18,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_946a67ce_19",
+                "status": 503,
+                "latencyMs": 776.48,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_946a67ce_22",
+                "status": 200,
+                "latencyMs": 572.28,
+                "duplicate": false,
+                "error": null
+              }
+            ],
+            "appRevision": 30,
+            "cloudRevision": 1
+          }
+        }
+      ],
+      "retriedFailedMessage": null,
+      "measurement": {
+        "id": "load_00a3cede",
+        "status": "degraded",
+        "testedAt": "2026-11-08T02:56:18.771+00:00",
+        "attempted": 24,
+        "delivered": 14,
+        "successRate": 0.5833,
+        "p95LatencyMs": 792.49,
+        "durationMs": 1582.44,
+        "concurrency": 12,
+        "sloMs": 1100,
+        "appRevision": 30,
+        "cloudRevision": 1
+      },
+      "after": {
+        "app": {
+          "readyWorkers": 1,
+          "failedAllocations": 5,
+          "totalAllocations": 6,
+          "maxAllocations": 6,
+          "revision": 30,
+          "status": "under_capacity"
+        },
+        "cloud": {
+          "revision": 1,
+          "capacity": 1,
+          "inFlight": 0,
+          "admitted": 47,
+          "rejected": 16,
+          "status": "unmeasured",
+          "gatewayCanary": {
+            "status": "unmeasured",
+            "testedAt": null
+          }
+        },
+        "health": {
+          "id": "load_00a3cede",
+          "status": "degraded",
+          "testedAt": "2026-11-08T02:56:18.771+00:00",
+          "attempted": 24,
+          "delivered": 14,
+          "successRate": 0.5833,
+          "p95LatencyMs": 792.49,
+          "durationMs": 1582.44,
+          "concurrency": 12,
+          "sloMs": 1100,
+          "appRevision": 30,
+          "cloudRevision": 1,
+          "fresh": true
+        }
+      },
+      "assertion": true
+    },
+    {
+      "arm": "cloud_only",
+      "initialOrdinaryMessage": {
+        "ok": true,
+        "id": "original-message",
+        "status": 200,
+        "latencyMs": 112.76,
+        "duplicate": false,
+        "error": null
+      },
+      "incident": {
+        "id": "load_6bd0406f",
+        "status": "degraded",
+        "testedAt": "2026-11-08T02:56:21.681+00:00",
+        "attempted": 24,
+        "delivered": 13,
+        "successRate": 0.5417,
+        "p95LatencyMs": 783.4,
+        "durationMs": 1451.59,
+        "concurrency": 12,
+        "sloMs": 1100,
+        "appRevision": 16,
+        "cloudRevision": 1
+      },
+      "before": {
+        "app": {
+          "role": "app",
+          "company": "TeamChat",
+          "at": "2026-11-08T02:56:21.682+00:00",
+          "revision": 16,
+          "targetWorkers": 4,
+          "maxAllocations": 6,
+          "readyWorkers": 1,
+          "busyWorkers": 0,
+          "allocations": [
+            {
+              "id": "worker_cf16f66e",
+              "status": "ready",
+              "createdAt": "2026-11-08T02:56:19.674+00:00",
+              "checkedAt": "2026-11-08T02:56:19.786+00:00",
+              "lastError": null,
+              "readinessMs": 111.33
+            },
+            {
+              "id": "worker_f081a319",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:19.788+00:00",
+              "checkedAt": "2026-11-08T02:56:20.721+00:00",
+              "lastError": "Actual backend readiness request failed after serving timeout",
+              "readinessMs": 112.47
+            },
+            {
+              "id": "worker_19c817fa",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:19.902+00:00",
+              "checkedAt": "2026-11-08T02:56:20.719+00:00",
+              "lastError": "Actual backend readiness request failed after serving timeout",
+              "readinessMs": 107.41
+            },
+            {
+              "id": "worker_3b7af156",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:20.010+00:00",
+              "checkedAt": "2026-11-08T02:56:20.724+00:00",
+              "lastError": "Actual backend readiness request failed after serving timeout",
+              "readinessMs": 104.52
+            },
+            {
+              "id": "worker_39c38c2c",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:20.236+00:00",
+              "checkedAt": "2026-11-08T02:56:20.479+00:00",
+              "lastError": "Readiness HTTP request timed out",
+              "readinessMs": 242.51
+            },
+            {
+              "id": "worker_3b5545ab",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:20.236+00:00",
+              "checkedAt": "2026-11-08T02:56:20.481+00:00",
+              "lastError": "Readiness HTTP request timed out",
+              "readinessMs": 244.12
+            }
+          ],
+          "events": [
+            {
+              "id": "event_2e24a58814",
+              "at": "2026-11-08T02:56:19.786+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_cf16f66e"
+            },
+            {
+              "id": "event_eb22bbec14",
+              "at": "2026-11-08T02:56:19.901+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_f081a319"
+            },
+            {
+              "id": "event_31bd799865",
+              "at": "2026-11-08T02:56:20.010+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_19c817fa"
+            },
+            {
+              "id": "event_368a4c3d5f",
+              "at": "2026-11-08T02:56:20.115+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_3b7af156"
+            },
+            {
+              "id": "event_48f1955ef2",
+              "at": "2026-11-08T02:56:20.116+00:00",
+              "company": "TeamChat",
+              "kind": "ready",
+              "message": "Chat is serving ordinary traffic; the cloud route is at its quiet-period capacity."
+            },
+            {
+              "id": "event_3a591e8aa6",
+              "at": "2026-11-08T02:56:20.479+00:00",
+              "company": "TeamChat",
+              "kind": "provisioning_failed",
+              "message": "Worker's actual readiness request failed; its allocation still occupies a pool slot.",
+              "allocationId": "worker_39c38c2c"
+            },
+            {
+              "id": "event_8ad79b44ba",
+              "at": "2026-11-08T02:56:20.481+00:00",
+              "company": "TeamChat",
+              "kind": "provisioning_failed",
+              "message": "Worker's actual readiness request failed; its allocation still occupies a pool slot.",
+              "allocationId": "worker_3b5545ab"
+            },
+            {
+              "id": "event_a98878a217",
+              "at": "2026-11-08T02:56:20.722+00:00",
+              "company": "TeamChat",
+              "kind": "worker_failed",
+              "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+              "allocationId": "worker_f081a319"
+            },
+            {
+              "id": "event_3a1fed8b14",
+              "at": "2026-11-08T02:56:20.723+00:00",
+              "company": "TeamChat",
+              "kind": "worker_failed",
+              "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+              "allocationId": "worker_19c817fa"
+            },
+            {
+              "id": "event_73e118461e",
+              "at": "2026-11-08T02:56:20.725+00:00",
+              "company": "TeamChat",
+              "kind": "worker_failed",
+              "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+              "allocationId": "worker_3b7af156"
+            }
+          ],
+          "allowedOperation": "reconcile_failed_allocations",
+          "operationContract": "Name only terminal failed allocation IDs at this revision. Healthy, checking and provisioning allocations cannot be removed. Reprovisioning uses actual readiness HTTP at concurrency one."
+        },
+        "cloud": {
+          "role": "cloud",
+          "company": "HarborCloud",
+          "at": "2026-11-08T02:56:21.682+00:00",
+          "revision": 1,
+          "capacity": 1,
+          "inFlight": 0,
+          "admitted": 18,
+          "rejected": 8,
+          "gatewayCanary": {
+            "status": "unmeasured",
+            "testedAt": null
+          },
+          "maximumAllowedCapacity": 16,
+          "validationContract": {
+            "gatewayConnectionCheck": {
+              "simultaneousRequests": 6,
+              "requiredSuccesses": 6,
+              "successCondition": "Every simultaneous real gateway-to-backend readiness request must succeed before this connection is called healthy.",
+              "scope": "HarborCloud's declared recovery check for this dedicated route; it does not establish TeamChat message delivery."
+            }
+          },
+          "events": [
+            {
+              "id": "event_ad537b8a9b",
+              "at": "2026-11-08T02:56:20.234+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_03f50e22cf",
+              "at": "2026-11-08T02:56:20.235+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_f774dc4b72",
+              "at": "2026-11-08T02:56:20.236+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_c1201c8242",
+              "at": "2026-11-08T02:56:20.237+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_6350f44bde",
+              "at": "2026-11-08T02:56:20.237+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_a804866c6c",
+              "at": "2026-11-08T02:56:20.478+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_03cc357273",
+              "at": "2026-11-08T02:56:20.480+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_39c9b4248e",
+              "at": "2026-11-08T02:56:20.483+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            }
+          ],
+          "allowedOperation": "increase_gateway_capacity",
+          "operationContract": "Propose a bounded integer capacity increase for this dedicated local route. Cannot inspect or change TeamChat allocations or messages."
+        }
+      },
+      "operations": [
+        {
+          "applied": true,
+          "proposalId": "proposal_b704e5528fb8",
+          "digest": "5113c12a5418f6a697e111bafce9a17e1dce38d32955fdfdd589942c5dad10a9",
+          "observation": {
+            "role": "cloud",
+            "company": "HarborCloud",
+            "at": "2026-11-08T02:56:21.803+00:00",
+            "revision": 2,
+            "capacity": 8,
+            "inFlight": 0,
+            "admitted": 24,
+            "rejected": 8,
+            "gatewayCanary": {
+              "status": "healthy",
+              "testedAt": "2026-11-08T02:56:21.801+00:00",
+              "cloudRevision": 2,
+              "concurrency": 6,
+              "attempted": 6,
+              "succeeded": 6,
+              "results": [
+                {
+                  "httpStatus": 200,
+                  "passed": true,
+                  "latencyMs": 115.12
+                },
+                {
+                  "httpStatus": 200,
+                  "passed": true,
+                  "latencyMs": 115.47
+                },
+                {
+                  "httpStatus": 200,
+                  "passed": true,
+                  "latencyMs": 107.91
+                },
+                {
+                  "httpStatus": 200,
+                  "passed": true,
+                  "latencyMs": 107.06
+                },
+                {
+                  "httpStatus": 200,
+                  "passed": true,
+                  "latencyMs": 107.8
+                },
+                {
+                  "httpStatus": 200,
+                  "passed": true,
+                  "latencyMs": 104.76
+                }
+              ],
+              "scope": "Six actual concurrent gateway-to-backend readiness requests; does not establish TeamChat message delivery."
+            },
+            "maximumAllowedCapacity": 16,
+            "validationContract": {
+              "gatewayConnectionCheck": {
+                "simultaneousRequests": 6,
+                "requiredSuccesses": 6,
+                "successCondition": "Every simultaneous real gateway-to-backend readiness request must succeed before this connection is called healthy.",
+                "scope": "HarborCloud's declared recovery check for this dedicated route; it does not establish TeamChat message delivery."
+              }
+            },
+            "events": [
+              {
+                "id": "event_ad537b8a9b",
+                "at": "2026-11-08T02:56:20.234+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_03f50e22cf",
+                "at": "2026-11-08T02:56:20.235+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_f774dc4b72",
+                "at": "2026-11-08T02:56:20.236+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_c1201c8242",
+                "at": "2026-11-08T02:56:20.237+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_6350f44bde",
+                "at": "2026-11-08T02:56:20.237+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_a804866c6c",
+                "at": "2026-11-08T02:56:20.478+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_03cc357273",
+                "at": "2026-11-08T02:56:20.480+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_39c9b4248e",
+                "at": "2026-11-08T02:56:20.483+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_83376c7c2f",
+                "at": "2026-11-08T02:56:21.684+00:00",
+                "company": "HarborCloud",
+                "kind": "owner_operation_applied",
+                "message": "Increase this route's concurrent HTTP capacity from 1 to 8.",
+                "proposalId": "proposal_b704e5528fb8",
+                "proposalDigest": "5113c12a5418f6a697e111bafce9a17e1dce38d32955fdfdd589942c5dad10a9"
+              }
+            ],
+            "allowedOperation": "increase_gateway_capacity",
+            "operationContract": "Propose a bounded integer capacity increase for this dedicated local route. Cannot inspect or change TeamChat allocations or messages."
+          },
+          "verification": {
+            "id": "load_1ce9914f",
+            "status": "degraded",
+            "testedAt": "2026-11-08T02:56:23.351+00:00",
+            "attempted": 24,
+            "delivered": 14,
+            "successRate": 0.5833,
+            "p95LatencyMs": 779.46,
+            "durationMs": 1547.54,
+            "concurrency": 12,
+            "sloMs": 1100,
+            "results": [
+              {
+                "ok": true,
+                "id": "load_1ce9914f_0",
+                "status": 200,
+                "latencyMs": 106.09,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_1",
+                "status": 200,
+                "latencyMs": 191.31,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_7",
+                "status": 200,
+                "latencyMs": 312.11,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_5",
+                "status": 200,
+                "latencyMs": 429.79,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_2",
+                "status": 200,
+                "latencyMs": 543.33,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_10",
+                "status": 200,
+                "latencyMs": 653.07,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_1ce9914f_9",
+                "status": 503,
+                "latencyMs": 752.68,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_1ce9914f_3",
+                "status": 503,
+                "latencyMs": 757.29,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_1ce9914f_6",
+                "status": 503,
+                "latencyMs": 762.85,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_1ce9914f_8",
+                "status": 503,
+                "latencyMs": 763.12,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_15",
+                "status": 200,
+                "latencyMs": 331.54,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_1ce9914f_11",
+                "status": 503,
+                "latencyMs": 768.19,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_1ce9914f_4",
+                "status": 503,
+                "latencyMs": 762.34,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_1ce9914f_12",
+                "status": 503,
+                "latencyMs": 758.9,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_13",
+                "status": 200,
+                "latencyMs": 671.02,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_22",
+                "status": 200,
+                "latencyMs": 224.34,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_1ce9914f_14",
+                "status": 503,
+                "latencyMs": 775.49,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_16",
+                "status": 200,
+                "latencyMs": 555.18,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_21",
+                "status": 200,
+                "latencyMs": 447.52,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_20",
+                "status": 200,
+                "latencyMs": 561.14,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_1ce9914f_17",
+                "status": 503,
+                "latencyMs": 769.86,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_23",
+                "status": 200,
+                "latencyMs": 662.83,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_1ce9914f_18",
+                "status": 503,
+                "latencyMs": 779.46,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_1ce9914f_19",
+                "status": 200,
+                "latencyMs": 780.64,
+                "duplicate": false,
+                "error": null
+              }
+            ],
+            "appRevision": 16,
+            "cloudRevision": 2
+          }
+        }
+      ],
+      "retriedFailedMessage": null,
+      "measurement": {
+        "id": "load_66703556",
+        "status": "degraded",
+        "testedAt": "2026-11-08T02:56:24.928+00:00",
+        "attempted": 24,
+        "delivered": 14,
+        "successRate": 0.5833,
+        "p95LatencyMs": 776.62,
+        "durationMs": 1575.28,
+        "concurrency": 12,
+        "sloMs": 1100,
+        "appRevision": 16,
+        "cloudRevision": 2
+      },
+      "after": {
+        "app": {
+          "readyWorkers": 1,
+          "failedAllocations": 5,
+          "totalAllocations": 6,
+          "maxAllocations": 6,
+          "revision": 16,
+          "status": "under_capacity"
+        },
+        "cloud": {
+          "revision": 2,
+          "capacity": 8,
+          "inFlight": 0,
+          "admitted": 52,
+          "rejected": 8,
+          "status": "healthy",
+          "gatewayCanary": {
+            "status": "healthy",
+            "testedAt": "2026-11-08T02:56:21.801+00:00",
+            "cloudRevision": 2,
+            "concurrency": 6,
+            "attempted": 6,
+            "succeeded": 6,
+            "results": [
+              {
+                "httpStatus": 200,
+                "passed": true,
+                "latencyMs": 115.12
+              },
+              {
+                "httpStatus": 200,
+                "passed": true,
+                "latencyMs": 115.47
+              },
+              {
+                "httpStatus": 200,
+                "passed": true,
+                "latencyMs": 107.91
+              },
+              {
+                "httpStatus": 200,
+                "passed": true,
+                "latencyMs": 107.06
+              },
+              {
+                "httpStatus": 200,
+                "passed": true,
+                "latencyMs": 107.8
+              },
+              {
+                "httpStatus": 200,
+                "passed": true,
+                "latencyMs": 104.76
+              }
+            ],
+            "scope": "Six actual concurrent gateway-to-backend readiness requests; does not establish TeamChat message delivery."
+          }
+        },
+        "health": {
+          "id": "load_66703556",
+          "status": "degraded",
+          "testedAt": "2026-11-08T02:56:24.928+00:00",
+          "attempted": 24,
+          "delivered": 14,
+          "successRate": 0.5833,
+          "p95LatencyMs": 776.62,
+          "durationMs": 1575.28,
+          "concurrency": 12,
+          "sloMs": 1100,
+          "appRevision": 16,
+          "cloudRevision": 2,
+          "fresh": true
+        }
+      },
+      "assertion": true
+    },
+    {
+      "arm": "both",
+      "initialOrdinaryMessage": {
+        "ok": true,
+        "id": "original-message",
+        "status": 200,
+        "latencyMs": 115.84,
+        "duplicate": false,
+        "error": null
+      },
+      "incident": {
+        "id": "load_85603ffe",
+        "status": "degraded",
+        "testedAt": "2026-11-08T02:56:28.254+00:00",
+        "attempted": 24,
+        "delivered": 12,
+        "successRate": 0.5,
+        "p95LatencyMs": 780.99,
+        "durationMs": 1347.64,
+        "concurrency": 12,
+        "sloMs": 1100,
+        "appRevision": 16,
+        "cloudRevision": 1
+      },
+      "before": {
+        "app": {
+          "role": "app",
+          "company": "TeamChat",
+          "at": "2026-11-08T02:56:28.254+00:00",
+          "revision": 16,
+          "targetWorkers": 4,
+          "maxAllocations": 6,
+          "readyWorkers": 1,
+          "busyWorkers": 0,
+          "allocations": [
+            {
+              "id": "worker_902f3ab1",
+              "status": "ready",
+              "createdAt": "2026-11-08T02:56:26.330+00:00",
+              "checkedAt": "2026-11-08T02:56:26.440+00:00",
+              "lastError": null,
+              "readinessMs": 109.12
+            },
+            {
+              "id": "worker_d4bd2668",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:26.442+00:00",
+              "checkedAt": "2026-11-08T02:56:27.397+00:00",
+              "lastError": "Actual backend readiness request failed after serving timeout",
+              "readinessMs": 108.8
+            },
+            {
+              "id": "worker_38894210",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:26.552+00:00",
+              "checkedAt": "2026-11-08T02:56:27.401+00:00",
+              "lastError": "Actual backend readiness request failed after serving timeout",
+              "readinessMs": 110.75
+            },
+            {
+              "id": "worker_d23bd311",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:26.670+00:00",
+              "checkedAt": "2026-11-08T02:56:27.403+00:00",
+              "lastError": "Actual backend readiness request failed after serving timeout",
+              "readinessMs": 115.28
+            },
+            {
+              "id": "worker_19c54f0d",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:26.913+00:00",
+              "checkedAt": "2026-11-08T02:56:27.155+00:00",
+              "lastError": "Readiness HTTP request timed out",
+              "readinessMs": 241.8
+            },
+            {
+              "id": "worker_91b09f73",
+              "status": "failed",
+              "createdAt": "2026-11-08T02:56:26.914+00:00",
+              "checkedAt": "2026-11-08T02:56:27.159+00:00",
+              "lastError": "Readiness HTTP request timed out",
+              "readinessMs": 244.47
+            }
+          ],
+          "events": [
+            {
+              "id": "event_c1b1130910",
+              "at": "2026-11-08T02:56:26.441+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_902f3ab1"
+            },
+            {
+              "id": "event_71465120d9",
+              "at": "2026-11-08T02:56:26.552+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_d4bd2668"
+            },
+            {
+              "id": "event_25d378143c",
+              "at": "2026-11-08T02:56:26.669+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_38894210"
+            },
+            {
+              "id": "event_3f05ee5a8f",
+              "at": "2026-11-08T02:56:26.786+00:00",
+              "company": "TeamChat",
+              "kind": "worker_ready",
+              "message": "Worker passed its actual backend readiness request.",
+              "allocationId": "worker_d23bd311"
+            },
+            {
+              "id": "event_05c273ca04",
+              "at": "2026-11-08T02:56:26.787+00:00",
+              "company": "TeamChat",
+              "kind": "ready",
+              "message": "Chat is serving ordinary traffic; the cloud route is at its quiet-period capacity."
+            },
+            {
+              "id": "event_578821eb61",
+              "at": "2026-11-08T02:56:27.156+00:00",
+              "company": "TeamChat",
+              "kind": "provisioning_failed",
+              "message": "Worker's actual readiness request failed; its allocation still occupies a pool slot.",
+              "allocationId": "worker_19c54f0d"
+            },
+            {
+              "id": "event_3310cd0148",
+              "at": "2026-11-08T02:56:27.159+00:00",
+              "company": "TeamChat",
+              "kind": "provisioning_failed",
+              "message": "Worker's actual readiness request failed; its allocation still occupies a pool slot.",
+              "allocationId": "worker_91b09f73"
+            },
+            {
+              "id": "event_cafc0239b1",
+              "at": "2026-11-08T02:56:27.400+00:00",
+              "company": "TeamChat",
+              "kind": "worker_failed",
+              "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+              "allocationId": "worker_d4bd2668"
+            },
+            {
+              "id": "event_b43caeaca8",
+              "at": "2026-11-08T02:56:27.403+00:00",
+              "company": "TeamChat",
+              "kind": "worker_failed",
+              "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+              "allocationId": "worker_38894210"
+            },
+            {
+              "id": "event_defaa73b0e",
+              "at": "2026-11-08T02:56:27.404+00:00",
+              "company": "TeamChat",
+              "kind": "worker_failed",
+              "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+              "allocationId": "worker_d23bd311"
+            }
+          ],
+          "allowedOperation": "reconcile_failed_allocations",
+          "operationContract": "Name only terminal failed allocation IDs at this revision. Healthy, checking and provisioning allocations cannot be removed. Reprovisioning uses actual readiness HTTP at concurrency one."
+        },
+        "cloud": {
+          "role": "cloud",
+          "company": "HarborCloud",
+          "at": "2026-11-08T02:56:28.254+00:00",
+          "revision": 1,
+          "capacity": 1,
+          "inFlight": 0,
+          "admitted": 17,
+          "rejected": 8,
+          "gatewayCanary": {
+            "status": "unmeasured",
+            "testedAt": null
+          },
+          "maximumAllowedCapacity": 16,
+          "validationContract": {
+            "gatewayConnectionCheck": {
+              "simultaneousRequests": 6,
+              "requiredSuccesses": 6,
+              "successCondition": "Every simultaneous real gateway-to-backend readiness request must succeed before this connection is called healthy.",
+              "scope": "HarborCloud's declared recovery check for this dedicated route; it does not establish TeamChat message delivery."
+            }
+          },
+          "events": [
+            {
+              "id": "event_d163d3e3a5",
+              "at": "2026-11-08T02:56:26.913+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_1a8f76c067",
+              "at": "2026-11-08T02:56:26.914+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_82157f0059",
+              "at": "2026-11-08T02:56:26.915+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_f6775563c7",
+              "at": "2026-11-08T02:56:26.916+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_6aab1ede9d",
+              "at": "2026-11-08T02:56:26.917+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_dcf35d44a6",
+              "at": "2026-11-08T02:56:27.157+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_c4e62f0af0",
+              "at": "2026-11-08T02:56:27.157+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            },
+            {
+              "id": "event_d8cde0f170",
+              "at": "2026-11-08T02:56:27.158+00:00",
+              "company": "HarborCloud",
+              "kind": "admission_timeout",
+              "message": "A request exceeded the route's concurrent HTTP admission capacity."
+            }
+          ],
+          "allowedOperation": "increase_gateway_capacity",
+          "operationContract": "Propose a bounded integer capacity increase for this dedicated local route. Cannot inspect or change TeamChat allocations or messages."
+        }
+      },
+      "operations": [
+        {
+          "applied": true,
+          "proposalId": "proposal_460c1be25687",
+          "digest": "356dafb00077589b4c37c7b59899695dba583d995beffd27c88174571bde6dc0",
+          "observation": {
+            "role": "cloud",
+            "company": "HarborCloud",
+            "at": "2026-11-08T02:56:28.376+00:00",
+            "revision": 2,
+            "capacity": 8,
+            "inFlight": 0,
+            "admitted": 23,
+            "rejected": 8,
+            "gatewayCanary": {
+              "status": "healthy",
+              "testedAt": "2026-11-08T02:56:28.371+00:00",
+              "cloudRevision": 2,
+              "concurrency": 6,
+              "attempted": 6,
+              "succeeded": 6,
+              "results": [
+                {
+                  "httpStatus": 200,
+                  "passed": true,
+                  "latencyMs": 112.57
+                },
+                {
+                  "httpStatus": 200,
+                  "passed": true,
+                  "latencyMs": 112.5
+                },
+                {
+                  "httpStatus": 200,
+                  "passed": true,
+                  "latencyMs": 112.83
+                },
+                {
+                  "httpStatus": 200,
+                  "passed": true,
+                  "latencyMs": 112.63
+                },
+                {
+                  "httpStatus": 200,
+                  "passed": true,
+                  "latencyMs": 111.56
+                },
+                {
+                  "httpStatus": 200,
+                  "passed": true,
+                  "latencyMs": 112.82
+                }
+              ],
+              "scope": "Six actual concurrent gateway-to-backend readiness requests; does not establish TeamChat message delivery."
+            },
+            "maximumAllowedCapacity": 16,
+            "validationContract": {
+              "gatewayConnectionCheck": {
+                "simultaneousRequests": 6,
+                "requiredSuccesses": 6,
+                "successCondition": "Every simultaneous real gateway-to-backend readiness request must succeed before this connection is called healthy.",
+                "scope": "HarborCloud's declared recovery check for this dedicated route; it does not establish TeamChat message delivery."
+              }
+            },
+            "events": [
+              {
+                "id": "event_d163d3e3a5",
+                "at": "2026-11-08T02:56:26.913+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_1a8f76c067",
+                "at": "2026-11-08T02:56:26.914+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_82157f0059",
+                "at": "2026-11-08T02:56:26.915+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_f6775563c7",
+                "at": "2026-11-08T02:56:26.916+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_6aab1ede9d",
+                "at": "2026-11-08T02:56:26.917+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_dcf35d44a6",
+                "at": "2026-11-08T02:56:27.157+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_c4e62f0af0",
+                "at": "2026-11-08T02:56:27.157+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_d8cde0f170",
+                "at": "2026-11-08T02:56:27.158+00:00",
+                "company": "HarborCloud",
+                "kind": "admission_timeout",
+                "message": "A request exceeded the route's concurrent HTTP admission capacity."
+              },
+              {
+                "id": "event_7a310216ce",
+                "at": "2026-11-08T02:56:28.257+00:00",
+                "company": "HarborCloud",
+                "kind": "owner_operation_applied",
+                "message": "Increase this route's concurrent HTTP capacity from 1 to 8.",
+                "proposalId": "proposal_460c1be25687",
+                "proposalDigest": "356dafb00077589b4c37c7b59899695dba583d995beffd27c88174571bde6dc0"
+              }
+            ],
+            "allowedOperation": "increase_gateway_capacity",
+            "operationContract": "Propose a bounded integer capacity increase for this dedicated local route. Cannot inspect or change TeamChat allocations or messages."
+          },
+          "verification": {
+            "id": "load_f48d0bf7",
+            "status": "degraded",
+            "testedAt": "2026-11-08T02:56:30.055+00:00",
+            "attempted": 24,
+            "delivered": 15,
+            "successRate": 0.625,
+            "p95LatencyMs": 782.94,
+            "durationMs": 1679.41,
+            "concurrency": 12,
+            "sloMs": 1100,
+            "results": [
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_4",
+                "status": 200,
+                "latencyMs": 108.11,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_3",
+                "status": 200,
+                "latencyMs": 167.91,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_8",
+                "status": 200,
+                "latencyMs": 328.23,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_10",
+                "status": 200,
+                "latencyMs": 395.15,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_1",
+                "status": 200,
+                "latencyMs": 507.29,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_11",
+                "status": 200,
+                "latencyMs": 642.91,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_f48d0bf7_5",
+                "status": 503,
+                "latencyMs": 759.79,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_f48d0bf7_0",
+                "status": 503,
+                "latencyMs": 772.39,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_f48d0bf7_7",
+                "status": 503,
+                "latencyMs": 772.62,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_2",
+                "status": 200,
+                "latencyMs": 779.26,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_f48d0bf7_6",
+                "status": 503,
+                "latencyMs": 768.42,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_f48d0bf7_9",
+                "status": 503,
+                "latencyMs": 771.39,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": false,
+                "id": "load_f48d0bf7_12",
+                "status": 503,
+                "latencyMs": 774.64,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_14",
+                "status": 200,
+                "latencyMs": 555.11,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_f48d0bf7_13",
+                "status": 503,
+                "latencyMs": 772.51,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_23",
+                "status": 200,
+                "latencyMs": 155.05,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_20",
+                "status": 200,
+                "latencyMs": 336.64,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_f48d0bf7_15",
+                "status": 503,
+                "latencyMs": 775.15,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_19",
+                "status": 200,
+                "latencyMs": 449.73,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_16",
+                "status": 200,
+                "latencyMs": 782.94,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_17",
+                "status": 200,
+                "latencyMs": 771.25,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": false,
+                "id": "load_f48d0bf7_18",
+                "status": 503,
+                "latencyMs": 765.64,
+                "duplicate": false,
+                "error": "No serving worker became available before the request deadline"
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_21",
+                "status": 200,
+                "latencyMs": 777.68,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_f48d0bf7_22",
+                "status": 200,
+                "latencyMs": 860.64,
+                "duplicate": false,
+                "error": null
+              }
+            ],
+            "appRevision": 16,
+            "cloudRevision": 2
+          }
+        },
+        {
+          "applied": true,
+          "proposalId": "proposal_80346ac12c44",
+          "digest": "074c8bc7e3a6ae6a5ab0f7609a4a8207f172cf8d2429937f3704a8ecf481ff60",
+          "observation": {
+            "role": "app",
+            "company": "TeamChat",
+            "at": "2026-11-08T02:56:30.406+00:00",
+            "revision": 23,
+            "targetWorkers": 4,
+            "maxAllocations": 6,
+            "readyWorkers": 4,
+            "busyWorkers": 0,
+            "allocations": [
+              {
+                "id": "worker_902f3ab1",
+                "status": "ready",
+                "createdAt": "2026-11-08T02:56:26.330+00:00",
+                "checkedAt": "2026-11-08T02:56:26.440+00:00",
+                "lastError": null,
+                "readinessMs": 109.12
+              },
+              {
+                "id": "worker_11e51d6a",
+                "status": "ready",
+                "createdAt": "2026-11-08T02:56:30.063+00:00",
+                "checkedAt": "2026-11-08T02:56:30.176+00:00",
+                "lastError": null,
+                "readinessMs": 112.44
+              },
+              {
+                "id": "worker_b5fb1ce4",
+                "status": "ready",
+                "createdAt": "2026-11-08T02:56:30.177+00:00",
+                "checkedAt": "2026-11-08T02:56:30.288+00:00",
+                "lastError": null,
+                "readinessMs": 111.39
+              },
+              {
+                "id": "worker_6075e344",
+                "status": "ready",
+                "createdAt": "2026-11-08T02:56:30.291+00:00",
+                "checkedAt": "2026-11-08T02:56:30.404+00:00",
+                "lastError": null,
+                "readinessMs": 112.92
+              }
+            ],
+            "events": [
+              {
+                "id": "event_c1b1130910",
+                "at": "2026-11-08T02:56:26.441+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_902f3ab1"
+              },
+              {
+                "id": "event_71465120d9",
+                "at": "2026-11-08T02:56:26.552+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_d4bd2668"
+              },
+              {
+                "id": "event_25d378143c",
+                "at": "2026-11-08T02:56:26.669+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_38894210"
+              },
+              {
+                "id": "event_3f05ee5a8f",
+                "at": "2026-11-08T02:56:26.786+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_d23bd311"
+              },
+              {
+                "id": "event_05c273ca04",
+                "at": "2026-11-08T02:56:26.787+00:00",
+                "company": "TeamChat",
+                "kind": "ready",
+                "message": "Chat is serving ordinary traffic; the cloud route is at its quiet-period capacity."
+              },
+              {
+                "id": "event_578821eb61",
+                "at": "2026-11-08T02:56:27.156+00:00",
+                "company": "TeamChat",
+                "kind": "provisioning_failed",
+                "message": "Worker's actual readiness request failed; its allocation still occupies a pool slot.",
+                "allocationId": "worker_19c54f0d"
+              },
+              {
+                "id": "event_3310cd0148",
+                "at": "2026-11-08T02:56:27.159+00:00",
+                "company": "TeamChat",
+                "kind": "provisioning_failed",
+                "message": "Worker's actual readiness request failed; its allocation still occupies a pool slot.",
+                "allocationId": "worker_91b09f73"
+              },
+              {
+                "id": "event_cafc0239b1",
+                "at": "2026-11-08T02:56:27.400+00:00",
+                "company": "TeamChat",
+                "kind": "worker_failed",
+                "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+                "allocationId": "worker_d4bd2668"
+              },
+              {
+                "id": "event_b43caeaca8",
+                "at": "2026-11-08T02:56:27.403+00:00",
+                "company": "TeamChat",
+                "kind": "worker_failed",
+                "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+                "allocationId": "worker_38894210"
+              },
+              {
+                "id": "event_defaa73b0e",
+                "at": "2026-11-08T02:56:27.404+00:00",
+                "company": "TeamChat",
+                "kind": "worker_failed",
+                "message": "A serving worker failed its backend readiness check and is awaiting reconciliation.",
+                "allocationId": "worker_d23bd311"
+              },
+              {
+                "id": "event_b46737af6c",
+                "at": "2026-11-08T02:56:30.060+00:00",
+                "company": "TeamChat",
+                "kind": "owner_operation_applied",
+                "message": "Remove 5 named terminal failed allocations, preserve healthy workers, and reprovision toward 4 ready workers at concurrency one.",
+                "proposalId": "proposal_80346ac12c44",
+                "proposalDigest": "074c8bc7e3a6ae6a5ab0f7609a4a8207f172cf8d2429937f3704a8ecf481ff60"
+              },
+              {
+                "id": "event_a3bee9a61e",
+                "at": "2026-11-08T02:56:30.176+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_11e51d6a"
+              },
+              {
+                "id": "event_c556b73cbb",
+                "at": "2026-11-08T02:56:30.290+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_b5fb1ce4"
+              },
+              {
+                "id": "event_758cd7e8a2",
+                "at": "2026-11-08T02:56:30.405+00:00",
+                "company": "TeamChat",
+                "kind": "worker_ready",
+                "message": "Worker passed its actual backend readiness request.",
+                "allocationId": "worker_6075e344"
+              }
+            ],
+            "allowedOperation": "reconcile_failed_allocations",
+            "operationContract": "Name only terminal failed allocation IDs at this revision. Healthy, checking and provisioning allocations cannot be removed. Reprovisioning uses actual readiness HTTP at concurrency one."
+          },
+          "verification": {
+            "id": "load_3aa2fbd5",
+            "status": "healthy",
+            "testedAt": "2026-11-08T02:56:30.970+00:00",
+            "attempted": 24,
+            "delivered": 24,
+            "successRate": 1.0,
+            "p95LatencyMs": 334.23,
+            "durationMs": 564.34,
+            "concurrency": 12,
+            "sloMs": 1100,
+            "results": [
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_11",
+                "status": 200,
+                "latencyMs": 107.86,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_0",
+                "status": 200,
+                "latencyMs": 111.51,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_3",
+                "status": 200,
+                "latencyMs": 114.13,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_9",
+                "status": 200,
+                "latencyMs": 115.06,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_4",
+                "status": 200,
+                "latencyMs": 211.38,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_6",
+                "status": 200,
+                "latencyMs": 176.39,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_7",
+                "status": 200,
+                "latencyMs": 200.47,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_1",
+                "status": 200,
+                "latencyMs": 190.82,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_5",
+                "status": 200,
+                "latencyMs": 228.64,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_12",
+                "status": 200,
+                "latencyMs": 125.27,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_8",
+                "status": 200,
+                "latencyMs": 328.12,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_15",
+                "status": 200,
+                "latencyMs": 212.26,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_10",
+                "status": 200,
+                "latencyMs": 334.09,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_20",
+                "status": 200,
+                "latencyMs": 104.88,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_2",
+                "status": 200,
+                "latencyMs": 319.4,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_18",
+                "status": 200,
+                "latencyMs": 114.12,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_19",
+                "status": 200,
+                "latencyMs": 203.98,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_21",
+                "status": 200,
+                "latencyMs": 204.21,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_23",
+                "status": 200,
+                "latencyMs": 113.78,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_17",
+                "status": 200,
+                "latencyMs": 222.06,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_16",
+                "status": 200,
+                "latencyMs": 228.24,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_14",
+                "status": 200,
+                "latencyMs": 334.23,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_13",
+                "status": 200,
+                "latencyMs": 436.11,
+                "duplicate": false,
+                "error": null
+              },
+              {
+                "ok": true,
+                "id": "load_3aa2fbd5_22",
+                "status": 200,
+                "latencyMs": 227.26,
+                "duplicate": false,
+                "error": null
+              }
+            ],
+            "appRevision": 27,
+            "cloudRevision": 2
+          }
+        }
+      ],
+      "retriedFailedMessage": {
+        "id": "load_85603ffe_7",
+        "originalAttemptFailed": true,
+        "retry": {
+          "ok": true,
+          "id": "load_85603ffe_7",
+          "status": 200,
+          "latencyMs": 111.74,
+          "duplicate": false,
+          "error": null
+        },
+        "repeatedRetry": {
+          "ok": true,
+          "id": "load_85603ffe_7",
+          "status": 200,
+          "latencyMs": 116.83,
+          "duplicate": true,
+          "error": null
+        },
+        "persistedRows": 1
+      },
+      "measurement": {
+        "id": "load_b01259eb",
+        "status": "healthy",
+        "testedAt": "2026-11-08T02:56:31.448+00:00",
+        "attempted": 24,
+        "delivered": 24,
+        "successRate": 1.0,
+        "p95LatencyMs": 333.34,
+        "durationMs": 476.31,
+        "concurrency": 12,
+        "sloMs": 1100,
+        "appRevision": 27,
+        "cloudRevision": 2
+      },
+      "after": {
+        "app": {
+          "readyWorkers": 6,
+          "failedAllocations": 0,
+          "totalAllocations": 6,
+          "maxAllocations": 6,
+          "revision": 27,
+          "status": "serving"
+        },
+        "cloud": {
+          "revision": 2,
+          "capacity": 8,
+          "inFlight": 0,
+          "admitted": 91,
+          "rejected": 8,
+          "status": "healthy",
+          "gatewayCanary": {
+            "status": "healthy",
+            "testedAt": "2026-11-08T02:56:28.371+00:00",
+            "cloudRevision": 2,
+            "concurrency": 6,
+            "attempted": 6,
+            "succeeded": 6,
+            "results": [
+              {
+                "httpStatus": 200,
+                "passed": true,
+                "latencyMs": 112.57
+              },
+              {
+                "httpStatus": 200,
+                "passed": true,
+                "latencyMs": 112.5
+              },
+              {
+                "httpStatus": 200,
+                "passed": true,
+                "latencyMs": 112.83
+              },
+              {
+                "httpStatus": 200,
+                "passed": true,
+                "latencyMs": 112.63
+              },
+              {
+                "httpStatus": 200,
+                "passed": true,
+                "latencyMs": 111.56
+              },
+              {
+                "httpStatus": 200,
+                "passed": true,
+                "latencyMs": 112.82
+              }
+            ],
+            "scope": "Six actual concurrent gateway-to-backend readiness requests; does not establish TeamChat message delivery."
+          }
+        },
+        "health": {
+          "id": "load_b01259eb",
+          "status": "healthy",
+          "testedAt": "2026-11-08T02:56:31.448+00:00",
+          "attempted": 24,
+          "delivered": 24,
+          "successRate": 1.0,
+          "p95LatencyMs": 333.34,
+          "durationMs": 476.31,
+          "concurrency": 12,
+          "sloMs": 1100,
+          "appRevision": 27,
+          "cloudRevision": 2,
+          "fresh": true
+        }
+      },
+      "assertion": true
+    }
+  ],
+  "allPassed": true
+}

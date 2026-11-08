@@ -1,0 +1,48 @@
+{
+  "at": "2026-11-08T00:35:45.936272+00:00",
+  "mode": "test_operator",
+  "model": "live authenticated Codex CLI",
+  "transport": "actual Switch + Mattermost",
+  "approval": "explicit scripted verification; no independent humans",
+  "checks": {
+    "both_owner_operations_executed": true,
+    "both_roles_live_model_calls": true,
+    "all_releases_actual_switch": true,
+    "all_approvals_test_label": true,
+    "both_roles_closed": true,
+    "engine_measured_recovery": true,
+    "room_scope_checks": true,
+    "receipts_match_captured_events": true
+  },
+  "passed": true,
+  "before": {
+    "status": "degraded",
+    "testedAt": "2026-11-08T00:35:47.487+00:00",
+    "attempted": 24,
+    "delivered": 14,
+    "successRate": 0.5833,
+    "p95LatencyMs": 772.79,
+    "durationMs": 1549.04,
+    "concurrency": 12,
+    "sloMs": 1100
+  },
+  "after": {
+    "status": "healthy",
+    "testedAt": "2026-11-08T00:36:30.173+00:00",
+    "attempted": 24,
+    "delivered": 24,
+    "successRate": 1.0,
+    "p95LatencyMs": 398.6,
+    "durationMs": 563.07,
+    "concurrency": 12,
+    "sloMs": 1100
+  },
+  "publication": {
+    "kind": "sanitized-public-summary",
+    "original_artifact_sha256": "116b3e999b183de60e938d4ee769edbc89b7489f156dd44ed98ff82d24dd347a",
+    "omitted": [
+      "coordination transcripts, source identities and message rows"
+    ],
+    "note": "Recorded aggregate outcomes are unchanged. The original private artifact is retained locally; this summary is not an independent attestation."
+  }
+}

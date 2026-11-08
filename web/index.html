@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8fa">
+  <title>RELAY — Get the message through.</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to the incident</a>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="RELAY home"><span class="brand-mark" aria-hidden="true">↗<span>↙</span></span>RELAY</a>
+    <div class="topbar-divider" aria-hidden="true"></div>
+    <span class="topbar-context">Two teams. One recovery.</span>
+    <div class="connection" id="connection" role="status"><span class="status-dot"></span><span>Connecting to the demo</span></div>
+  </header>
+
+  <main class="page">
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">TEAMCHAT × HARBORCLOUD <span class="fiction-label">Fictional companies</span></p>
+        <h1 id="page-title">Get the message through.</h1>
+        <p class="intro-description">The chat team runs the app. Its cloud partner runs the connection. Each owner approves their own changes.</p>
+      </div>
+      <div class="case-status" id="case-status"><span class="status-dot"></span>Waiting for the live state</div>
+    </section>
+
+    <section class="director" aria-label="Demo controls">
+      <div class="director-actions">
+        <button type="button" class="button button-primary" id="start-burst"><span aria-hidden="true">↗</span> Start busy morning</button>
+        <button type="button" class="button button-secondary" id="investigate"><span class="agent-symbol" aria-hidden="true">✧</span> Ask the agents</button>
+      </div>
+      <p id="director-note">Start a busy morning with your draft message and 23 other real requests.</p>
+      <button type="button" class="button button-quiet" id="reset-demo"><span aria-hidden="true">↻</span> Reset demo</button>
+    </section>
+
+    <div class="global-notice" id="global-notice" role="alert" hidden></div>
+
+    <section class="workspace" id="workspace" aria-label="Live incident workspace">
+      <section class="panel chat-panel" aria-labelledby="chat-title">
+        <div class="panel-heading">
+          <div class="heading-group"><span class="app-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5.5h14v10H10l-5 3v-13Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9h6M9 12h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><h2 id="chat-title">TeamChat</h2><p>The experience people rely on</p></div></div>
+          <span class="small-badge" id="chat-health">Connecting</span>
+        </div>
+        <div class="chat-channel"><span aria-hidden="true">#</span> morning-check-in <span class="channel-caption">Live app</span></div>
+        <div class="chat-messages" id="chat-messages" aria-live="polite" aria-relevant="additions text"><div class="empty-state"><span class="empty-icon" aria-hidden="true">↗</span><h3>A message should simply arrive.</h3><p>Send one below. Its delivery status comes from the running chat app.</p></div></div>
+        <div class="load-activity" id="load-activity" hidden><span class="spinner" aria-hidden="true"></span><span>People are sending messages…</span></div>
+        <form class="composer" id="message-form">
+          <label class="sr-only" for="message-input">Message to the team</label>
+          <input id="message-input" name="message" autocomplete="off" maxlength="500" placeholder="Message the team…" value="Can anyone see this?" required>
+          <button class="send-button" type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 14-7-5 14-3-6-6-1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m11 13 8-8" stroke="currentColor" stroke-width="1.7"/></svg></button>
+        </form>
+        <div class="impact-summary" id="impact-summary"><span class="muted">Delivery results appear after a real attempt.</span></div>
+      </section>
+
+      <section class="panel incident-panel" aria-labelledby="incident-title">
+        <div class="panel-heading">
+          <div class="heading-group"><span class="switch-icon" aria-hidden="true">↔</span><div><h2 id="incident-title">The shared incident</h2><p>Company agents meet in Switch</p></div></div>
+          <span class="live-label" id="switch-label"><span class="status-dot"></span>Connecting</span>
+        </div>
+        <div class="service-summary" id="service-summary">
+          <div class="service-row"><span class="service-icon" aria-hidden="true">↔</span><div><strong>Cloud connection</strong><p>Waiting for a live observation</p></div><span class="service-state neutral">—</span></div>
+          <div class="service-row"><span class="service-icon" aria-hidden="true">▦</span><div><strong>Chat capacity</strong><p>Waiting for a live observation</p></div><span class="service-state neutral">—</span></div>
+        </div>
+        <div class="incident-feed" id="incident-feed" aria-live="polite" aria-relevant="additions"><div class="feed-empty"><span class="empty-icon" aria-hidden="true">↔</span><h3>Bring the right people together.</h3><p>Ask the agents to investigate. Only findings approved for sharing appear here.</p><div class="ownership-note"><span>Maya · TeamChat</span><span aria-hidden="true">↔</span><span>Leo · HarborCloud</span></div></div></div>
+        <div class="feed-footnote" id="feed-footnote"><span class="lock-icon" aria-hidden="true">▣</span> Private company records stay in their own desks.</div>
+      </section>
+
+      <aside class="panel owner-panel" aria-labelledby="owner-title">
+        <div class="panel-heading owner-heading"><div><p class="eyebrow">HUMAN REVIEW</p><h2 id="owner-title">Your decision, your company.</h2></div></div>
+        <div class="owner-tabs" role="tablist" aria-label="Choose a fictional owner to play">
+          <button type="button" role="tab" id="tab-teamchat" aria-selected="true" aria-controls="owner-desk" data-role="teamchat"><span class="avatar avatar-teamchat">M</span><span><strong>Maya</strong><small>TeamChat</small></span><span class="pending-count" id="count-teamchat" hidden></span></button>
+          <button type="button" role="tab" id="tab-harborcloud" aria-selected="false" aria-controls="owner-desk" tabindex="-1" data-role="harborcloud"><span class="avatar avatar-harborcloud">L</span><span><strong>Leo</strong><small>HarborCloud</small></span><span class="pending-count" id="count-harborcloud" hidden></span></button>
+        </div>
+        <div class="owner-desk" id="owner-desk" role="tabpanel" aria-labelledby="tab-teamchat">
+          <p class="roleplay-note">You are playing Maya, the fictional TeamChat owner.</p>
+          <div id="agent-status" class="agent-status"><span class="agent-symbol" aria-hidden="true">✧</span><div><strong>Your company’s agent</strong><p>No investigation started yet.</p></div></div>
+          <div id="owner-proposals"><div class="owner-empty"><span class="review-icon" aria-hidden="true">✓</span><h3>No decision waiting.</h3><p>Your agent will bring you a specific finding to share or a change to approve.</p></div></div>
+        </div>
+        <div class="owner-boundary"><strong>Each owner controls their side.</strong><p>Maya can approve TeamChat actions. Leo can approve HarborCloud actions.</p></div>
+      </aside>
+    </section>
+
+    <details class="evidence-drawer" id="evidence-drawer">
+      <summary><span><span aria-hidden="true">⌘</span> Show evidence</span><span class="evidence-caption">Actual measurements, approvals and source references</span><span class="disclosure-chevron" aria-hidden="true">⌄</span></summary>
+      <div id="evidence-content" class="evidence-content"><p class="muted">Evidence appears when the running services return it.</p></div>
+    </details>
+    <footer class="page-footer"><span>RELAY · A working, fictional incident demo</span><span>Live application requests · Scoped agents · Reviewed decisions</span></footer>
+  </main>
+
+  <dialog id="review-dialog" class="review-dialog" aria-labelledby="review-title"><div id="review-content"></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>

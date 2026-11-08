@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "modelCalls": 12,
+  "perRole": {
+    "teamchat": 6,
+    "harborcloud": 6
+  },
+  "distinctCliThreads": 12,
+  "summedInferenceSeconds": 91.412,
+  "actualSwitchReleases": 6,
+  "ownerOperations": 2,
+  "disclosures": 4,
+  "approvalMode": "test_operator",
+  "sourceHashes": {
+    "agents/__init__.py": "1ff555596a2f470bbac99102000acdfe6f9be3b5179f99fabf86aea354850e45",
+    "agents/bootstrap.py": "143e5adcb2e40d190c3ba7572fc83b433160ec5b10ab761edfd53940014ef3a2",
+    "agents/bridge.py": "c9fdbc08eb7cac031d4b2224f6ce40f92780496813ca2f003b442b9407f52d6e",
+    "agents/model.py": "5cf61f9e2d0862b6276359080a3d1234de881bae67dc9bc09448edf0b43ecbdb",
+    "agents/native_setup.py": "5b23029634f2fc9627d27ff0e6a410ff5cc276ec6273d3d4cb97e87ecf04ff2d",
+    "agents/relay.py": "d8e4ff9cebb977fd5fcda5181a92ca6eaeedfe58ef06a24e09eb4a2d4582aa72",
+    "agents/switch_client.py": "f81ff14eeaa9713921477c77c3aa4800f67e82d7999aeed3c1e892efdc83c268",
+    "agents/verify.py": "031778b605032991ad7ba3ae5b2e7d107001f35b342065ba36de9e58fdee6a2a"
+  },
+  "secretScan": {
+    "filesScanned": 4,
+    "knownCredentialValues": 11,
+    "credentialOccurrences": 0
+  },
+  "beforeHealth": {
+    "status": "degraded",
+    "testedAt": "2026-11-08T00:35:47.487+00:00",
+    "attempted": 24,
+    "delivered": 14,
+    "successRate": 0.5833,
+    "p95LatencyMs": 772.79,
+    "durationMs": 1549.04,
+    "concurrency": 12,
+    "sloMs": 1100
+  },
+  "afterHealth": {
+    "status": "healthy",
+    "testedAt": "2026-11-08T00:36:30.173+00:00",
+    "attempted": 24,
+    "delivered": 24,
+    "successRate": 1.0,
+    "p95LatencyMs": 398.6,
+    "durationMs": 563.07,
+    "concurrency": 12,
+    "sloMs": 1100
+  },
+  "publication": {
+    "kind": "sanitized-public-summary",
+    "original_artifact_sha256": "28483e03776bd51f1defe67a3b999b9cb71e291d01b0ad7f2cdfbc3dd855ef32",
+    "omitted": [
+      "individual CLI thread records",
+      "private archive paths",
+      "account/team identifiers",
+      "setup/previous-run transcripts",
+      "token usage metadata"
+    ],
+    "note": "Recorded aggregate outcomes are unchanged. The original private artifact is retained locally; this summary is not an independent attestation."
+  }
+}

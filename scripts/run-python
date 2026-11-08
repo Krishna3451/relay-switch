@@ -1,0 +1,11 @@
+#!/bin/sh
+# Resolve an explicit interpreter, the project virtualenv, or Python on PATH.
+set -eu
+cd "$(dirname "$0")/.."
+if [ -n "${RELAY_PYTHON:-}" ]; then
+  exec "$RELAY_PYTHON" "$@"
+fi
+if [ -x .venv/bin/python ]; then
+  exec .venv/bin/python "$@"
+fi
+exec python3 "$@"

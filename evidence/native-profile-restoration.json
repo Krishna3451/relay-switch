@@ -1,0 +1,15 @@
+{
+  "restored": true,
+  "checks": {
+    "customerDisplayExact": true,
+    "customerImmutableUserId": true,
+    "customerPreferenceExact": true,
+    "providerDisplayExact": true,
+    "providerImmutableUserId": true,
+    "providerPreferenceExact": true,
+    "observerPreferenceExact": true
+  },
+  "originalsSource": "Earliest pre-first-take audit; copied forward unchanged into take03",
+  "profiles": 2,
+  "scope": "Only fictional reviewer display fields and normal name-format preferences. No IDs, usernames, emails, credentials, permissions, source posts or captured frames changed."
+}
