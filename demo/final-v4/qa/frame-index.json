@@ -1,0 +1,72 @@
+[
+  {
+    "file": "01-opening-hook.jpg",
+    "time_seconds": 0.7,
+    "sha256": "cf3bf1d95e66283429605f3d0a4e6dbf0b124632e2b9431259c3b0b968f9da34"
+  },
+  {
+    "file": "02-privacy-opening.jpg",
+    "time_seconds": 13,
+    "sha256": "9f9c96b3daa6177e629e8babcab473ee9ca1abd50eb994cb910eafaeb784e700"
+  },
+  {
+    "file": "03-opening-transition.jpg",
+    "time_seconds": 42.2,
+    "sha256": "1505f1981b6ddf0d2781aa64505a460cbaa27521d93caad4c8af1f639be96117"
+  },
+  {
+    "file": "04-moving-demo-start.jpg",
+    "time_seconds": 43.5,
+    "sha256": "17f574d4668520f562b757dc79e8c36ff05abd9001f3b89c6891ac07f50dbb70"
+  },
+  {
+    "file": "05-agent-working.jpg",
+    "time_seconds": 56,
+    "sha256": "6c678ceb048c33933ced6055c26cfd6e8c5754db95941f8f087fa1d48116deb2"
+  },
+  {
+    "file": "06-maya-share.jpg",
+    "time_seconds": 70.09166666666667,
+    "sha256": "bf0f6471fcb88e7af35cbb0c03bb7423dc2661a52f258089bc7ab71ea3c4fdb7"
+  },
+  {
+    "file": "07-shared-finding.jpg",
+    "time_seconds": 75.29166666666666,
+    "sha256": "7f66590df53f7629c23dca1c8425c51bc4263767e8d5f41f14b1bb3043cf23c8"
+  },
+  {
+    "file": "08-leo-approval.jpg",
+    "time_seconds": 88.29166666666666,
+    "sha256": "6fa70580a86a25194c5473d6512e79593e74879c8f4057aead0ad8e9e0f241b2"
+  },
+  {
+    "file": "09-cloud-partial.jpg",
+    "time_seconds": 97.29166666666666,
+    "sha256": "994653be0123970561482267a1ca038ec4c2d594dcc3ae3ecfa4ba078918250a"
+  },
+  {
+    "file": "10-maya-app-approval.jpg",
+    "time_seconds": 111.49166666666667,
+    "sha256": "5d4c942e034f0dab78b052a184f26c6a9818bc5f7651f705d3e810af5b0ce5e8"
+  },
+  {
+    "file": "11-delivery-passed.jpg",
+    "time_seconds": 124.29166666666666,
+    "sha256": "957091ef146af877ed5694f595a986ac227d8a6399effbf7ee465f59b37b9439"
+  },
+  {
+    "file": "12-original-retry.jpg",
+    "time_seconds": 134.29166666666666,
+    "sha256": "a262da748c16b73cbfaaa998c3a166e436e6d63f42b19bb33fbb452e7fd083f9"
+  },
+  {
+    "file": "13-incident-result.jpg",
+    "time_seconds": 137.29166666666666,
+    "sha256": "a76edb3799885aa2663b5479fb392ea56d2cde099b61b11e241352508fd90c75"
+  },
+  {
+    "file": "14-closing.jpg",
+    "time_seconds": 144.29166666666666,
+    "sha256": "e66d7761231bb5c54ff8343a5f3eafc0ebb6db18400670b1ec7d21c516a7f65f"
+  }
+]

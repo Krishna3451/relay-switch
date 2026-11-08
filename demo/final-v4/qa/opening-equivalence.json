@@ -1,0 +1,17 @@
+{
+  "kind": "opening-decoded-frame-structural-equivalence",
+  "frames": 1039,
+  "comparison_dimensions": [
+    480,
+    270
+  ],
+  "fps": 24,
+  "opening_seconds": 43.291666666666664,
+  "ssim_mean": 0.9999392300288921,
+  "ssim_min": 0.999901,
+  "passed": true,
+  "note": "Every decoded opening frame was compared after uniform downscaling. This verifies visual structure after re-encoding, not bit-identical compressed video.",
+  "source_video": "demo/final-v3/delivery/Relay-final.mp4",
+  "source_sha256": "b832b14d7ee689458cdc49fca828fab670ccb95efa57265a9fd620302ed4bb51",
+  "candidate_sha256": "9d806559ac7c73355c2df82d483aea2b2dc4893c57cf3d6d56896b0f9e602c19"
+}

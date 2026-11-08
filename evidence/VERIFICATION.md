@@ -2,7 +2,7 @@
 
 These are bounded synthetic local checks, not a production deployment or a
 support-speed comparison. The selected final video is
-[final Relay video](../demo/final-v3/delivery/Relay-final.mp4) (1080p24).
+[final Relay video](../demo/final-v4/delivery/Relay-final.mp4) (1080p24).
 
 The recorded native run used 12 live model calls in separate company histories,
 six reviewed Switch releases and nine original enrolled-account source posts.
@@ -34,8 +34,8 @@ A central agent granted equivalent access remains a valid alternative.
 - [Native aggregate evidence](native-verification.json)
 - [Four-arm causal evidence](causal-proof.json)
 - [Earlier web-bridge aggregate audit](live-audit.json)
-- [Final assembly checks](../demo/final-v3/assembly-manifest.json)
-- [Final join/content review](../demo/final-v3/qa/review-report.json)
+- [Final assembly checks](../demo/final-v4/assembly-manifest.json)
+- [Final join/content review](../demo/final-v4/qa/review-report.json)
 - [Publication omissions and prerequisites](../SUBMISSION-NOTES.md)
 
 Public JSON files explicitly state sanitization and preserve original artifact

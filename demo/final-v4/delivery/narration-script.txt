@@ -1,0 +1,35 @@
+You send an important message. It never arrives.
+
+TeamChat is a messaging app for people and teams. HarborCloud is its cloud platform. Fixing the failure needs both teams.
+
+But their logs can contain customer information and private system details. Engineers must pick out what is safe to share, pass findings back and forth, and check whether each fix actually restored delivery.
+
+Relay connects their agents through Switch. Each investigates its own systems. Only owner-approved findings reach the other team. Each company approves changes to its own systems.
+
+Then both teams test what customers care about: did the messages arrive?
+
+Here’s how.
+
+Maya reports the problem in the shared incident channel and asks TeamChat’s agent to investigate. Leo, HarborCloud’s engineer, replies that his team is available.
+
+TeamChat’s agent acknowledges the request and starts checking its service. In Maya’s private workroom, it reports connection failures and parts of the message service that failed to start. It prepares a focused question for HarborCloud.
+
+Maya reviews the question and replies, “Share with HarborCloud.”
+
+That question arrives in the shared incident thread. HarborCloud’s agent receives it through Switch and starts its own investigation.
+
+It finds the overloaded connection and proposes more capacity. Leo reviews the change in his company’s private thread and replies, “Approve this change.”
+
+The agent applies the change. Its result returns to the shared incident: the cloud connection check passes, but a fresh message-delivery check still fails.
+
+TeamChat’s agent uses that result to identify what remains. It proposes recovering the failed parts of its own message service. Maya reviews the proposal and approves it in the same thread.
+
+The agent performs the recovery. The reviewed findings and test results return to the shared incident, where both teams can follow the outcome.
+
+Run the same delivery test again: 24 messages sent, 24 arrived.
+
+Maya asks the agent to retry an earlier message that genuinely failed. It retries that same message and confirms delivery.
+
+Both teams can see the findings, approvals, changes, and verified result in the incident conversation.
+
+Relay. Two teams. One recovery.

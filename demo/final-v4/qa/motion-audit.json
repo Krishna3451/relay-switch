@@ -1,0 +1,284 @@
+{
+  "kind": "fixed-region-source-matched-native-content-motion-audit",
+  "passed": true,
+  "source_video": "demo/final/Relay-demo.mp4",
+  "source_sha256": "cd899c0bc99bcbbc22f74c08a3169525f687ed5b2225556cc5ac9aba634ec043",
+  "candidate_video": "Relay-final.mp4",
+  "candidate_sha256": "9d806559ac7c73355c2df82d483aea2b2dc4893c57cf3d6d56896b0f9e602c19",
+  "candidate_intro_seconds": 43.291666666666664,
+  "original_body_start_seconds": 53.0,
+  "method": {
+    "original_roi": [
+      1460,
+      180,
+      420,
+      700
+    ],
+    "sample_dimensions": [
+      210,
+      350
+    ],
+    "fps": 4,
+    "native_clip_transition_exclusion_seconds": 0.45,
+    "pixel_delta_threshold": 12,
+    "minimum_changed_area_fraction": 0.015,
+    "candidate_source_match_tolerance_gray": 10,
+    "minimum_motion_pixel_preservation_fraction": 0.8,
+    "note": "ROI excludes toolbar clocks and composer. Only within-clip native source windows are compared. Candidate pixels not matching both original source frames are excluded, preventing annotation strokes from counting as UI motion. This confirms retained screen content changes; it is not a new model or service run."
+  },
+  "meaningful_native_changes": 8,
+  "preserved_native_changes": 8,
+  "windows_with_changes": 7,
+  "windows": [
+    {
+      "stream": "shared",
+      "stage": "incident",
+      "original_native_window": [
+        53.242,
+        55.537
+      ],
+      "changes": []
+    },
+    {
+      "stream": "shared",
+      "stage": "presence",
+      "original_native_window": [
+        59.742,
+        61.848
+      ],
+      "changes": [
+        {
+          "original_time": 60.5,
+          "candidate_time": 50.792,
+          "source_changed_pixel_fraction": 0.1468,
+          "both_frames_source_matched_fraction": 1.0,
+          "source_motion_pixels_preserved_fraction": 1.0,
+          "confirmed_source_matched_content_change_fraction": 0.1468,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "stream": "shared",
+      "stage": "presence",
+      "original_native_window": [
+        63.533,
+        65.457
+      ],
+      "changes": []
+    },
+    {
+      "stream": "teamchat",
+      "stage": "incident",
+      "original_native_window": [
+        68.325,
+        76.073
+      ],
+      "changes": [
+        {
+          "original_time": 76.0,
+          "candidate_time": 66.292,
+          "source_changed_pixel_fraction": 0.0242,
+          "both_frames_source_matched_fraction": 1.0,
+          "source_motion_pixels_preserved_fraction": 1.0,
+          "confirmed_source_matched_content_change_fraction": 0.0242,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "stream": "teamchat",
+      "stage": "share_question",
+      "original_native_window": [
+        77.242,
+        79.768
+      ],
+      "changes": [
+        {
+          "original_time": 78.25,
+          "candidate_time": 68.542,
+          "source_changed_pixel_fraction": 0.2536,
+          "both_frames_source_matched_fraction": 1.0,
+          "source_motion_pixels_preserved_fraction": 1.0,
+          "confirmed_source_matched_content_change_fraction": 0.2536,
+          "passed": true
+        },
+        {
+          "original_time": 78.5,
+          "candidate_time": 68.792,
+          "source_changed_pixel_fraction": 0.3022,
+          "both_frames_source_matched_fraction": 1.0,
+          "source_motion_pixels_preserved_fraction": 1.0,
+          "confirmed_source_matched_content_change_fraction": 0.3022,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "stream": "shared",
+      "stage": "share_question",
+      "original_native_window": [
+        82.325,
+        85.445
+      ],
+      "changes": [
+        {
+          "original_time": 82.75,
+          "candidate_time": 73.042,
+          "source_changed_pixel_fraction": 0.3361,
+          "both_frames_source_matched_fraction": 1.0,
+          "source_motion_pixels_preserved_fraction": 1.0,
+          "confirmed_source_matched_content_change_fraction": 0.3361,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "stream": "harborcloud",
+      "stage": "approve_cloud",
+      "original_native_window": [
+        90.825,
+        92.916
+      ],
+      "changes": []
+    },
+    {
+      "stream": "harborcloud",
+      "stage": "approve_cloud",
+      "original_native_window": [
+        95.242,
+        97.153
+      ],
+      "changes": [
+        {
+          "original_time": 96.0,
+          "candidate_time": 86.292,
+          "source_changed_pixel_fraction": 0.2424,
+          "both_frames_source_matched_fraction": 1.0,
+          "source_motion_pixels_preserved_fraction": 1.0,
+          "confirmed_source_matched_content_change_fraction": 0.2424,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "stream": "harborcloud",
+      "stage": "approve_cloud",
+      "original_native_window": [
+        100.908,
+        102.413
+      ],
+      "changes": []
+    },
+    {
+      "stream": "shared",
+      "stage": "share_cloud_result",
+      "original_native_window": [
+        103.408,
+        106.118
+      ],
+      "changes": []
+    },
+    {
+      "stream": "teamchat",
+      "stage": "approve_app",
+      "original_native_window": [
+        110.992,
+        112.497
+      ],
+      "changes": []
+    },
+    {
+      "stream": "teamchat",
+      "stage": "approve_app",
+      "original_native_window": [
+        119.45,
+        120.757
+      ],
+      "changes": [
+        {
+          "original_time": 120.25,
+          "candidate_time": 110.542,
+          "source_changed_pixel_fraction": 0.2779,
+          "both_frames_source_matched_fraction": 0.9999,
+          "source_motion_pixels_preserved_fraction": 0.9998,
+          "confirmed_source_matched_content_change_fraction": 0.2778,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "stream": "teamchat",
+      "stage": "approve_app",
+      "original_native_window": [
+        122.95,
+        124.471
+      ],
+      "changes": []
+    },
+    {
+      "stream": "shared",
+      "stage": "share_app_result",
+      "original_native_window": [
+        125.575,
+        128.089
+      ],
+      "changes": []
+    },
+    {
+      "stream": "shared",
+      "stage": "share_app_result",
+      "original_native_window": [
+        131.533,
+        134.042
+      ],
+      "changes": []
+    },
+    {
+      "stream": "shared",
+      "stage": "retry",
+      "original_native_window": [
+        138.283,
+        139.001
+      ],
+      "changes": [
+        {
+          "original_time": 139.0,
+          "candidate_time": 129.292,
+          "source_changed_pixel_fraction": 0.1503,
+          "both_frames_source_matched_fraction": 1.0,
+          "source_motion_pixels_preserved_fraction": 1.0,
+          "confirmed_source_matched_content_change_fraction": 0.1503,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "stream": "shared",
+      "stage": "retry",
+      "original_native_window": [
+        142.992,
+        144.49
+      ],
+      "changes": []
+    },
+    {
+      "stream": "shared",
+      "stage": "retry",
+      "original_native_window": [
+        146.325,
+        148.236
+      ],
+      "changes": []
+    },
+    {
+      "stream": "shared",
+      "stage": "close",
+      "original_native_window": [
+        149.533,
+        151.247
+      ],
+      "changes": []
+    }
+  ]
+}

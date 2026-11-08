@@ -1,0 +1,188 @@
+{
+  "kind": "independent-native-motion-visual-content-and-caption-review",
+  "passed": true,
+  "video": "demo/final-v4/delivery/Relay-final.mp4",
+  "video_sha256": "9d806559ac7c73355c2df82d483aea2b2dc4893c57cf3d6d56896b0f9e602c19",
+  "duration_seconds": 145.79166666666666,
+  "checks": {
+    "preferred_opening_visually_retained": true,
+    "all_1039_opening_frames_structurally_match": true,
+    "native_message_and_approval_content_changes_retained": true,
+    "all_eight_tested_content_changes_match_original_source": true,
+    "callouts_overlay_moving_footage_instead_of_replacing_it": true,
+    "reviewed_callout_borders_leave_text_readable": true,
+    "cloud_pass_and_app_failure_are_distinct": true,
+    "app_delivery_pass_is_before_original_message_retry": true,
+    "retry_keeps_original_identity_and_deduplicates": true,
+    "full_approved_finding_scope_is_not_misrepresented": true,
+    "illustrative_opening_and_fictional_demo_are_disclosed": true,
+    "caption_cues_ordered_nonoverlapping_and_within_video": true,
+    "qa_frame_hashes_match_reviewed_files": true
+  },
+  "composition": {
+    "opening_picture_seconds": [
+      0,
+      43.291666666666664
+    ],
+    "opening_source": "demo/final-v3/delivery/Relay-final.mp4",
+    "restored_body_original_seconds": [
+      53,
+      155.5
+    ],
+    "restored_body_source": "demo/final/Relay-demo.mp4",
+    "body_retimed": false,
+    "review_note": "The previous wide native Mattermost sequence returns. Short attention boxes point at native owner replies, the approved finding, partial recovery, full delivery and retry. The original room/thread transitions and message arrivals remain visible."
+  },
+  "opening_equivalence": {
+    "report": "opening-equivalence.json",
+    "frames": 1039,
+    "comparison_dimensions": [
+      480,
+      270
+    ],
+    "ssim_mean": 0.9999392300288921,
+    "ssim_min": 0.999901,
+    "passed": true,
+    "note": "Every decoded opening frame was compared after uniform downscaling. This verifies visual structure after re-encoding, not bit-identical compressed video."
+  },
+  "motion_audit": {
+    "report": "motion-audit.json",
+    "passed": true,
+    "meaningful_native_changes": 8,
+    "preserved_native_changes": 8,
+    "windows_with_changes": 7,
+    "method": {
+      "original_roi": [
+        1460,
+        180,
+        420,
+        700
+      ],
+      "sample_dimensions": [
+        210,
+        350
+      ],
+      "fps": 4,
+      "native_clip_transition_exclusion_seconds": 0.45,
+      "pixel_delta_threshold": 12,
+      "minimum_changed_area_fraction": 0.015,
+      "candidate_source_match_tolerance_gray": 10,
+      "minimum_motion_pixel_preservation_fraction": 0.8,
+      "note": "ROI excludes toolbar clocks and composer. Only within-clip native source windows are compared. Candidate pixels not matching both original source frames are excluded, preventing annotation strokes from counting as UI motion. This confirms retained screen content changes; it is not a new model or service run."
+    },
+    "minimum_observed_source_motion_pixel_preservation_fraction": 0.9998,
+    "note": "Eight measurable message/approval changes across seven native windows match the actual earlier film. Within-clip content is tested, not camera cuts, zooms, clocks or newly drawn borders."
+  },
+  "visual_review": {
+    "reviewed_frames": [
+      {
+        "file": "01-opening-hook.jpg",
+        "time_seconds": 0.7,
+        "sha256": "cf3bf1d95e66283429605f3d0a4e6dbf0b124632e2b9431259c3b0b968f9da34"
+      },
+      {
+        "file": "02-privacy-opening.jpg",
+        "time_seconds": 13,
+        "sha256": "9f9c96b3daa6177e629e8babcab473ee9ca1abd50eb994cb910eafaeb784e700"
+      },
+      {
+        "file": "03-opening-transition.jpg",
+        "time_seconds": 42.2,
+        "sha256": "1505f1981b6ddf0d2781aa64505a460cbaa27521d93caad4c8af1f639be96117"
+      },
+      {
+        "file": "04-moving-demo-start.jpg",
+        "time_seconds": 43.5,
+        "sha256": "17f574d4668520f562b757dc79e8c36ff05abd9001f3b89c6891ac07f50dbb70"
+      },
+      {
+        "file": "05-agent-working.jpg",
+        "time_seconds": 56,
+        "sha256": "6c678ceb048c33933ced6055c26cfd6e8c5754db95941f8f087fa1d48116deb2"
+      },
+      {
+        "file": "06-maya-share.jpg",
+        "time_seconds": 70.09166666666667,
+        "sha256": "bf0f6471fcb88e7af35cbb0c03bb7423dc2661a52f258089bc7ab71ea3c4fdb7"
+      },
+      {
+        "file": "07-shared-finding.jpg",
+        "time_seconds": 75.29166666666666,
+        "sha256": "7f66590df53f7629c23dca1c8425c51bc4263767e8d5f41f14b1bb3043cf23c8"
+      },
+      {
+        "file": "08-leo-approval.jpg",
+        "time_seconds": 88.29166666666666,
+        "sha256": "6fa70580a86a25194c5473d6512e79593e74879c8f4057aead0ad8e9e0f241b2"
+      },
+      {
+        "file": "09-cloud-partial.jpg",
+        "time_seconds": 97.29166666666666,
+        "sha256": "994653be0123970561482267a1ca038ec4c2d594dcc3ae3ecfa4ba078918250a"
+      },
+      {
+        "file": "10-maya-app-approval.jpg",
+        "time_seconds": 111.49166666666667,
+        "sha256": "5d4c942e034f0dab78b052a184f26c6a9818bc5f7651f705d3e810af5b0ce5e8"
+      },
+      {
+        "file": "11-delivery-passed.jpg",
+        "time_seconds": 124.29166666666666,
+        "sha256": "957091ef146af877ed5694f595a986ac227d8a6399effbf7ee465f59b37b9439"
+      },
+      {
+        "file": "12-original-retry.jpg",
+        "time_seconds": 134.29166666666666,
+        "sha256": "a262da748c16b73cbfaaa998c3a166e436e6d63f42b19bb33fbb452e7fd083f9"
+      },
+      {
+        "file": "13-incident-result.jpg",
+        "time_seconds": 137.29166666666666,
+        "sha256": "a76edb3799885aa2663b5479fb392ea56d2cde099b61b11e241352508fd90c75"
+      },
+      {
+        "file": "14-closing.jpg",
+        "time_seconds": 144.29166666666666,
+        "sha256": "e66d7761231bb5c54ff8343a5f3eafc0ebb6db18400670b1ec7d21c516a7f65f"
+      }
+    ],
+    "supplementary_editor_review": "editor-review.json",
+    "findings": [
+      "The opening retains the important-message hook, clear company roles, privacy rationale and Here's how transition.",
+      "Maya's sharing reply is shown in the TeamChat workroom; the complete approved finding appears in the shared incident.",
+      "A finding and its evidence references are approved for disclosure; the narration does not claim that only the last question sentence crosses.",
+      "HarborCloud's reviewed result shows six successful connection checks while only fifteen of twenty-four app messages arrive.",
+      "Maya separately approves the app repair. The first twenty-four-of-twenty-four delivery check precedes the earlier-message retry.",
+      "The original failed message is recovered with unchanged identity/text, and the repeated request does not create another copy.",
+      "The final widened outlines surround the native text without cutting off author labels, line endings or approval descenders."
+    ]
+  },
+  "captions": {
+    "count": 40,
+    "first_start_seconds": 0.058,
+    "last_end_seconds": 145.552,
+    "join_cues": [
+      {
+        "start": 41.877,
+        "end": 42.678,
+        "text": "Here's how."
+      },
+      {
+        "start": 43.476,
+        "end": 47.876,
+        "text": "Maya reports the problem in the shared incident channel and asks TeamChat's agent"
+      },
+      {
+        "start": 47.911,
+        "end": 53.17,
+        "text": "to investigate. Leo, HarborCloud's engineer, replies that his team is available."
+      }
+    ]
+  },
+  "limits": [
+    "This is an independent sampled visual, caption-timeline and source-matched screen-motion review, not a new live agent or service run.",
+    "The historical native source cadence is approximately five frames per second, rendered at twenty-four fps with the previous reading holds and edited waits retained.",
+    "The separate assembly manifest checks source PCM retention and decoding. This review does not claim a full independent auditory or streamed-YouTube playback review.",
+    "The companies and incident are fictional; one presenter roleplays both owners. No production isolation, automatic PII redaction or measured speed advantage is claimed."
+  ]
+}

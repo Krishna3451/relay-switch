@@ -1,0 +1,52 @@
+{
+  "kind": "Final encoded attention-guide visual review",
+  "passed": true,
+  "video_sha256": "9d806559ac7c73355c2df82d483aea2b2dc4893c57cf3d6d56896b0f9e602c19",
+  "checks": {
+    "seven_critical_outlines_visually_reviewed": true,
+    "text_not_covered_by_outline": true,
+    "native_full_landscape_interface_preserved": true,
+    "owner_replies_visible": true,
+    "cloud_only_partial_failure_visible": true,
+    "pre_retry_24_of_24_before_retry": true,
+    "same_original_message_retry_result_visible": true
+  },
+  "frames": [
+    {
+      "file": "06-maya-share.jpg",
+      "time_seconds": 70.09166666666667,
+      "sha256": "bf0f6471fcb88e7af35cbb0c03bb7423dc2661a52f258089bc7ab71ea3c4fdb7"
+    },
+    {
+      "file": "07-shared-finding.jpg",
+      "time_seconds": 75.29166666666666,
+      "sha256": "7f66590df53f7629c23dca1c8425c51bc4263767e8d5f41f14b1bb3043cf23c8"
+    },
+    {
+      "file": "08-leo-approval.jpg",
+      "time_seconds": 88.29166666666666,
+      "sha256": "6fa70580a86a25194c5473d6512e79593e74879c8f4057aead0ad8e9e0f241b2"
+    },
+    {
+      "file": "09-cloud-partial.jpg",
+      "time_seconds": 97.29166666666666,
+      "sha256": "994653be0123970561482267a1ca038ec4c2d594dcc3ae3ecfa4ba078918250a"
+    },
+    {
+      "file": "10-maya-app-approval.jpg",
+      "time_seconds": 111.49166666666667,
+      "sha256": "5d4c942e034f0dab78b052a184f26c6a9818bc5f7651f705d3e810af5b0ce5e8"
+    },
+    {
+      "file": "11-delivery-passed.jpg",
+      "time_seconds": 124.29166666666666,
+      "sha256": "957091ef146af877ed5694f595a986ac227d8a6399effbf7ee465f59b37b9439"
+    },
+    {
+      "file": "12-original-retry.jpg",
+      "time_seconds": 134.29166666666666,
+      "sha256": "a262da748c16b73cbfaaa998c3a166e436e6d63f42b19bb33fbb452e7fd083f9"
+    }
+  ],
+  "scope": "Visual inspection of seven final encoded key moments. This review checks that the outlines surround the actual native findings, approvals and results without covering text. Motion/source equivalence is audited separately; this is not a new live service run or an independent full streamed-playback review."
+}

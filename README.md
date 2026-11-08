@@ -23,12 +23,12 @@ exact text before it crosses to the other company. A finding can generate anothe
 question, so the shared incident carries the investigation forward between teams.
 
 [Explore the interactive showcase](https://krishna3451.github.io/relay-switch/) ·
-[Watch the revised 2:31 demo](https://youtu.be/hwYgd1PSP4U) ·
-[Download the final video](demo/final-v3/delivery/Relay-final.mp4) ·
-[Captions](demo/final-v3/delivery/Relay-final.srt) ·
+[Watch the 2:26 Mattermost demo](https://youtu.be/6Qyd5QiBLIM) ·
+[Download the final video](demo/final-v4/delivery/Relay-final.mp4) ·
+[Captions](demo/final-v4/delivery/Relay-final.srt) ·
 [Run locally](#run-locally) · [Evidence](#evidence)
 
-[![TeamChat messaging app and HarborCloud cloud platform](docs/assets/relay-overview.png)](https://youtu.be/hwYgd1PSP4U)
+[![TeamChat messaging app and HarborCloud cloud platform](docs/assets/relay-overview.png)](https://youtu.be/6Qyd5QiBLIM)
 
 > TeamChat and HarborCloud are fictional. The video uses live model decisions,
 > actual Switch messages and real local HTTP recovery checks. One presenter

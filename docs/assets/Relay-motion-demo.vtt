@@ -1,0 +1,188 @@
+WEBVTT
+
+1
+00:00:00.058 --> 00:00:01.649
+You send an important message.
+
+2
+00:00:01.823 --> 00:00:03.019
+It never arrives.
+
+3
+00:00:03.460 --> 00:00:06.211
+TeamChat is a messaging app for people and
+teams.
+
+4
+00:00:06.594 --> 00:00:08.603
+HarborCloud is its cloud platform.
+
+5
+00:00:08.986 --> 00:00:11.157
+Fixing the failure needs both teams.
+
+6
+00:00:11.598 --> 00:00:15.731
+But their logs can contain customer
+information and private system details.
+
+7
+00:00:16.242 --> 00:00:21.025
+Engineers must pick out what is safe to
+share, pass findings back and forth, and
+
+8
+00:00:21.083 --> 00:00:24.009
+check whether each fix actually restored
+delivery.
+
+9
+00:00:24.613 --> 00:00:26.598
+Relay connects their agents through Switch.
+
+10
+00:00:26.923 --> 00:00:29.024
+Each investigates its own systems.
+
+11
+00:00:29.628 --> 00:00:32.449
+Only owner-approved findings reach the
+other team.
+
+12
+00:00:33.053 --> 00:00:36.060
+Each company approves changes to its own
+systems.
+
+13
+00:00:36.664 --> 00:00:41.273
+Then both teams test what customers care
+about: did the messages arrive?
+
+14
+00:00:41.877 --> 00:00:42.678
+Here's how.
+
+15
+00:00:43.476 --> 00:00:47.876
+Maya reports the problem in the shared
+incident channel and asks TeamChat's agent
+
+16
+00:00:47.911 --> 00:00:53.170
+to investigate. Leo, HarborCloud's
+engineer, replies that his team is
+available.
+
+17
+00:00:53.611 --> 00:00:57.466
+TeamChat's agent acknowledges the request
+and starts checking its service.
+
+18
+00:00:58.163 --> 00:01:01.762
+In Maya's private workroom, it reports
+connection failures and parts of the
+
+19
+00:01:01.808 --> 00:01:03.747
+message service that failed to start.
+
+20
+00:01:04.188 --> 00:01:06.836
+It prepares a focused question for
+HarborCloud.
+
+21
+00:01:07.346 --> 00:01:11.758
+Maya reviews the question and replies,
+"Share with HarborCloud."
+
+22
+00:01:12.571 --> 00:01:15.288
+That question arrives in the shared
+incident thread.
+
+23
+00:01:15.891 --> 00:01:20.338
+HarborCloud's agent receives it through
+Switch and starts its own investigation.
+
+24
+00:01:21.034 --> 00:01:24.494
+It finds the overloaded connection and
+proposes more capacity.
+
+25
+00:01:25.098 --> 00:01:29.811
+Leo reviews the change in his company's
+private thread and replies, "Approve this
+
+26
+00:01:29.870 --> 00:01:32.645
+change." The agent applies the change.
+
+27
+00:01:33.248 --> 00:01:38.032
+Its result returns to the shared incident:
+the cloud connection check passes, but
+
+28
+00:01:38.055 --> 00:01:40.516
+a fresh message-delivery check still fails.
+
+29
+00:01:41.120 --> 00:01:44.568
+TeamChat's agent uses that result to
+identify what remains.
+
+30
+00:01:45.172 --> 00:01:48.701
+It proposes recovering the failed parts of
+its own message service.
+
+31
+00:01:49.305 --> 00:01:52.475
+Maya reviews the proposal and approves it
+in the same thread.
+
+32
+00:01:53.078 --> 00:01:55.075
+The agent performs the recovery.
+
+33
+00:01:55.400 --> 00:01:59.371
+The reviewed findings and test results
+return to the shared incident, where both
+
+34
+00:01:59.441 --> 00:02:01.090
+teams can follow the outcome.
+
+35
+00:02:01.693 --> 00:02:07.835
+Run the same delivery test again: 24
+messages sent, 24 arrived.
+
+36
+00:02:08.439 --> 00:02:12.247
+Maya asks the agent to retry an earlier
+message that genuinely failed.
+
+37
+00:02:12.850 --> 00:02:15.799
+It retries that same message and confirms
+delivery.
+
+38
+00:02:16.496 --> 00:02:21.012
+Both teams can see the findings, approvals,
+changes, and verified result in the
+
+39
+00:02:21.082 --> 00:02:23.404
+incident conversation. Relay.
+
+40
+00:02:23.497 --> 00:02:25.552
+Two teams. One recovery.

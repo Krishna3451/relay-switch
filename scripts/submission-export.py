@@ -168,7 +168,7 @@ def known_secrets():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--demo-dir', type=Path, default=Path('demo/final-v3'),
+    parser.add_argument('--demo-dir', type=Path, default=Path('demo/final-v4'),
                         help='Selected final video edition; only its curated delivery/QA is exported')
     parser.add_argument('--refresh', action='store_true', help='Refresh only a previously generated export')
     args = parser.parse_args()
@@ -199,10 +199,10 @@ def main():
                 if source.suffix in CODE_SUFFIXES or source.name.startswith('run-') or is_doc_asset or is_workflow:
                     paths.add(relative)
     for source in (ROOT / demo_dir / 'delivery').glob('*'):
-        if source.suffix in {'.mp4', '.srt', '.txt', '.json'}:
+        if source.suffix in {'.mp4', '.srt', '.vtt', '.txt', '.json'}:
             paths.add(source.relative_to(ROOT))
     for source in (ROOT / demo_dir / 'qa').glob('*'):
-        if source.suffix in {'.png', '.json'}:
+        if source.suffix in {'.png', '.jpg', '.jpeg', '.json'}:
             paths.add(source.relative_to(ROOT))
     paths.add(demo_dir / 'assembly-manifest.json')
     for name in ['mattermost-script-v3.txt', 'mattermost-live-flow-v3.txt']:
