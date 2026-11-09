@@ -191,8 +191,10 @@ disclosure format. That replay made no model calls or Switch posts.
 
 ## Run locally
 
-The [GitHub Pages site](https://krishna3451.github.io/relay-switch/) includes an
-illustrative browser walkthrough and the recorded video with English captions.
+The [GitHub Pages site](https://krishna3451.github.io/relay-switch/) tells the
+incident through an animated, illustrated walkthrough, then shows the recorded
+Mattermost demo with English captions. Follow the approved finding between
+companies and see why a healthy cloud check still leaves messages undelivered.
 It is a static showcase; it does not run the agents or repair infrastructure.
 Its buildless HTML, CSS and JavaScript live in `docs/`. Preview the site with
 `python3 -m http.server 4339 --directory docs`. GitHub Pages publishes `main:/docs`.
